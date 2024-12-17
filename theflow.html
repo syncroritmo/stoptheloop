@@ -1,0 +1,575 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Flow</title>
+    <link rel="icon" type="image/x-icon" href="syncro favicon.png">
+</head>
+<body>
+    <div class="col-12" id="header">
+        <h1 class="titolininav" id="nav-left" onclick="openHome()" style="cursor: pointer;">syncro</h1>
+        <img class="titolininav" id="stoptheloop" onclick="openTest()" src="test media/STOP THE LOOP.png" style="cursor: pointer;">
+    </div>
+    <div class="col-12" id="welcome">
+        <h1 id="ritmotype-res">RITMO<br><i>type</i></h1>
+        <h1 class="ritmotype-title singer"><i>the </i>FLOW </h1>
+        <div id="stats">
+            <div class="stat-cont">
+                <a><i>vibe</i></a>
+                <a>INDIPENDENZA</a>
+            </div>
+            <div class="stat-cont">
+                <a><i>frequenza</i></a>
+                <a>REGOLARE</a>
+            </div>
+            <div class="stat-cont">
+                <a><i>andamento</i></a>
+                <a>LENTO</a>
+            </div>
+        </div>
+        <img id="ritmotype-img1" src="ritmotypes_assets/theflow_1.png" alt="The Flow">
+    </div>
+    <div class="col-3" id="nave">
+        <img src="ritmotypes_assets/theflow_2.webp">
+    </div>
+    <div class="col-6" id="content">
+        <div class="spacer" id="project-section"></div>
+        <div class="single-p-mix">
+            <div class="title-container singer">BIO</div>
+            <p>Come il flow in una traccia musicale, segue il ritmo naturale della sua stabilità. Paziente e metodico, si muove con grande costanza, 
+                creando un’ armonia impossibile da spezzare. La sua capacità di adattarsi lo rende unico, indipendente e pieno di risorse.</p>
+        </div>
+        <div class="single-p-mix">
+            <div class="title-container singer">RUOLO: SINGER</div>
+            <p>Affrontano il mondo con grande unicità e autonomia.<br>Il loro ritmo riflette in pieno l'espressione personale che rende ogni loro esperienza su misura.</p>
+            <img src="ritmotypes_assets/theflow_3.webp">
+        </div>
+        <div class="single-p-mix">
+            <div class="title-container singer">MOBILITà</div>
+            <p>Nella mobilità, The Flow preferisce mezzi affidabili e autonomi, come bicicletta o auto personale, 
+                che gli permettono di seguire il proprio ritmo. Non dipende dai trasporti pubblici o dalle corse veloci.</p>
+        </div>
+        <div class="dual-p-mix">
+            <div id="dual-left">
+                <div class="title-container singer">TOP FEAT.</div>
+                <p>Si armonizza con The Topline, dove la stabilità e la costanza del Flow offrono il terreno ideale per la creatività. 
+                Insieme, creano un equilibrio tra regolarità e ispirazione che scorre senza sforzo.</p>
+            </div>
+            <div id="dual-right">
+                <img src="ritmotypes_assets/theflow_4.webp">
+            </div>
+        </div>
+        <div class="dual-p-mix">
+            <div id="dual-left">
+                <div class="title-container singer">HIT</div>
+                <ul>
+                    <li>Affidabile e resistente.</li>
+                    <li>Autonomo e metodico.</li>
+                    <li>Capace di raggiungere obbiettivi con tenacia.</li>
+                </ul>
+            </div>
+            <div id="dual-right">
+                <div class="title-container singer">FLOP</div>
+                <ul>
+                    <li>Può risultare monotono o prevedibile.</li>
+                    <li>Incline alla rigidità, fatica ad adattarsi ai cambiamenti improvvisi.</li>
+                    <li>Talvolta troppo lento per le esigenze degli altri.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="spacer" id="project-section"></div>
+        <div class="spotify-cont">
+            <div class="dual-p-mix" id="stoplist">
+                <div id="dual-left">
+                    <div class="title-container singer">STOPLIST</div>
+                    <p>Ecco a te la StopList di The Flow, la playlist che unisce la tua musica a questo RitmoType, creando momenti per ritrovare te stesso.</p>
+                </div>
+                <div id="stoplist-img">
+                    <img src="ritmotypes_assets/theflow_5.png" alt="">
+                </div>
+            </div>
+            <div class="btn-container">
+                <button class="btn spoty" onclick="openSpotify()">Ascolta su Spotify</button>
+            </div>
+        </div>
+        <div class="download-container">
+            <p class="download-title">Download my RitmoType</p>
+            <div class="btn-container">
+                <button class="btn btn-down" onclick="downloadPdf()">RitmoType PDF</button>
+                <button class="btn btn-down" onclick="downloadSocial()">Social Media Layout</button>
+            </div>
+        </div>
+        <div class="download-container">
+            <p class="download-title">Scopri di più</p>
+            <div class="btn-container">
+                <button class="btn btn-expl" onclick="openRitmario()">Esplora i Ritmotype</button>
+                <button class="btn btn-expl" onclick="openHome()">Scopri il progetto</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-3" id="info">
+        <h2><b>Stop The Loop</b><br>by Syncro<br>2025©<br><br><br></h2>
+        <div id="icons">
+            <a><img class="icon" src="icons/ig.png" data-link="https://www.instagram.com/syncro.ritmo/" style="cursor: pointer;"></a>
+            <a><img class="icon" src="icons/tiktok.png" data-link="https://www.instagram.com/syncro.ritmo/" style="cursor: pointer;"></a>
+            <a><img class="icon" src="icons/spotify.png" data-link="https://www.instagram.com/syncro.ritmo/" style="cursor: pointer;"></a>
+            <a href="mailto:syncro.ritmo@gmail.com"><img class="icon" src="icons/mail.png" style="cursor: pointer;"></a>
+        </div>
+    </div>
+    <div class="spacer" id="project-section"></div>
+    <div class="spacer" id="project-section"></div>
+    <div class="col-12" id="footer">
+        <div class="col-12">
+            <h3>Laboratorio di Sintesi Finale C2<br>
+                Corso di L. M. in Design della Comunicazione - Politecnico di Milano.<br>
+                Docenti: M. Ciancia, K. Goldoni, F. Piredda,  M. Ronchi.<br>
+                Tutor: S. Barozzi, G. Carbone, V. Dal Brun, S. Dall'Angelo.</h3>
+        </div>
+    </div>
+</body>
+<style>
+    body {
+        width: 100vw;
+        margin: 0;
+        background-color: black;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        row-gap: 2rem;
+        justify-content: space-between;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-3 {
+        width: 16.67%;
+        height: 100vh;
+    }
+
+    .titolininav {
+        font-size: 1.4rem;
+        font-family: sora;
+        color: white;
+        margin: 0;
+        top: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    #nav-left{
+        margin-left: 1.2rem;
+    }
+
+    #nav-right{
+        margin-right: 1.2rem;
+    }
+
+    #stoptheloop{
+        margin-top: 1.6rem;
+        width: 6vw;
+        margin-right: 1.2rem;
+    }
+
+    #header {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        z-index: 200;
+    }
+
+    #welcome {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+    }
+
+    #ritmotype-res{
+        text-align: center;
+        font-family: sora, sans-serif;
+        font-weight: 600;
+        line-height: 0.7;
+        margin-top: 3vw;
+        margin-bottom: 0;
+        font-size: 2vw;
+        color: white;
+    }
+
+    #ritmotype-res i{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+    }
+
+    .ritmotype-title{
+        font-family: sora, sans-serif;
+        font-weight: 600;
+        font-size: 10vw;
+        letter-spacing: -0.5vw;
+        margin-top: 3vw;
+        margin-bottom: 0;
+    }
+
+    .ritmotype-title i{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+
+    .singer{
+        color: #FF6CA8;
+    }
+
+    #stats{
+        display: flex;
+        font-family: sora, sans-serif;
+        font-weight: 600;
+        font-size: 2vw;
+        margin-bottom: 5vw;
+        width: 50vw;
+
+        justify-content: space-between;
+    }
+
+    .stat-cont{
+        width: 15vw;
+        color: #FF6CA8;
+        font-size: 1.4vw;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stat-cont i{
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+
+    #ritmotype-img1{
+        width: 50vw;
+    }
+
+    h2 {
+        font-size: 1.2vw;
+        font-family: sora;
+        font-weight: 400;
+        color: white;
+        margin: 0;
+        top: 1.2rem;
+        margin-top: 1.2rem;
+
+    }
+
+    #nave {
+        /*background-color: aquamarine;*/
+        position: sticky;
+        top: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 1.2rem;
+    }
+
+    #nave h2{
+        margin: 0;
+        margin-left: 1.2rem;
+        cursor: pointer;
+    }
+
+    #icons{
+        display: flex;
+        flex-direction: row;
+        gap: 0.4vw;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .icon{
+        width: 2.2vw;
+    }
+
+    #info {
+        /*background-color: red;*/
+        position: sticky;
+        top: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 1.2rem;
+        line-height: 1.6vw;
+    }
+
+    #info h2{
+        margin: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    #content {
+        /*background-color: blue;*/
+        overflow-y: scroll;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        row-gap: 5vw;
+    }
+
+    #content p{
+        font-size: 1.4vw;
+        font-family: sora;
+        font-weight: 400;
+        color: white;
+        margin: 0;
+        top: 1rem;
+    }
+
+    #content ul{
+        font-size: 1.4vw;
+        font-family: sora;
+        font-weight: 400;
+        color: white;
+        margin: 0;
+        top: 1rem;
+        padding-left: 1vw;
+    }
+
+    #content .single-p-mix{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        gap: 1vw;
+    }
+
+    .single-p-mix img{
+        width: 100%;
+    }
+
+    #content .dual-p-mix{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .dual-p-mix div{
+        width: 24vw;
+    }
+
+    #dual-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        gap: 1vw;
+    }
+
+    #dual-right{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1vw;
+    }
+
+    .dual-p-mix img{
+        width: 70%;
+    }
+
+    .spotify-cont{
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    #stoplist{
+        background-color: #1D1D1D;
+        border-radius: 1vw;
+        padding: 1.5vw;
+    }
+
+    #stoplist-img{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .title-container{
+        width: 100%;
+        font-family: sora, sans-serif;
+        font-weight: 600;
+        font-size: 3vw;
+        text-transform: uppercase;
+    }
+
+    .spacer{
+        width: 100%;
+        height: 5vh;
+        background-color: black;
+    }
+
+    .img-container{
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-small{
+        width: 67%;
+    }
+
+    .img-biggie{
+        width: 100%;
+    }
+
+    .btn {
+        border: 2px solid black;
+        background-color: white;
+        padding: 1vw 2vw;
+        cursor: pointer;
+        border-color: white;
+        border-radius: 6vw;
+        height: 4.4vw;
+
+        font-size: 1.4vw;
+        font-family: sora;
+        font-weight: 600;
+        color: black;
+    }
+
+    .dual {
+        width: 12vw;
+    }
+
+    .btn:hover {
+        background: black;
+        color: white;
+        transition: 50ms linear;
+    }
+
+    .btn-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* Posizionamento statico */
+        flex-shrink: 0; /* Mantieni la dimensione */
+        gap: 2vw;
+    }
+
+    .download-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap:3vw;
+    }
+
+    .download-title{
+        font-family: sora;
+        font-weight: 600;
+        text-align: center;
+        width: 100%;
+    }
+
+    .btn-down{
+        width: 20vw;
+        color: white;
+        background-color: #FF6CA8;
+        border-color: #FF6CA8;
+    }
+
+    .btn-down:hover {
+        background: black;
+        color: #FF6CA8;
+        transition: 50ms linear;
+    }
+
+    .btn-expl{
+        width: 20vw;
+        color: black;
+        background-color: white;
+        border-color: white;
+    }
+
+    #footer {
+        /*background-color: red;*/
+        z-index: 200;;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    #footer h3{
+        font-size: 1.2rem;
+        font-family: sora;
+        font-weight: 400;
+        color: white;
+        margin: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+        opacity: 50%;
+    }
+</style>
+
+<script>
+    function scrollToSection(event) {
+        // Recupera il valore di data-target dall'elemento cliccato
+        const targetId = event.target.getAttribute('data-target');
+        const targetElement = document.getElementById(targetId);
+
+        // Se l'elemento esiste, esegui lo scroll
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' }); // Scroll fluido
+        }
+    }
+
+    function openSpotify() {
+        window.open('https://open.spotify.com/intl-it/artist/2OwUh4IB8tJ5wdqoQV22Yr?si=jZCDnLoERxiMMpMSM580QA', '_blank');
+    }
+
+
+    function openRitmario() {
+        window.open('ritmario.html', '_blank');
+    }
+
+    function openHome() {
+        window.open('landing.html', '_blank');
+    }
+
+    function openTest() {
+        window.open('ritmotest.html', '_blank');
+    }
+
+    function downloadPdf() {
+        const newTab = window.open('ritmotypes_download/the FLOW.pdf', '_blank'); // Apre il PDF in una nuova scheda
+        newTab.focus();
+    }
+
+    function downloadSocial() {
+        const newTab = window.open('ritmotypes_download/The Flow.png', '_blank'); // Apre il PDF in una nuova scheda
+        newTab.focus();
+    }
+
+    document.querySelectorAll(".icon").forEach(image => {
+    image.addEventListener("click", () => {
+        const link = image.getAttribute("data-link"); // Leggi il link dal data-link
+        window.open(link, "_blank"); // Apri il link in una nuova scheda
+    });
+});
+</script>
+</html>

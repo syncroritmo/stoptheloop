@@ -1,0 +1,356 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop the Loop</title>
+    <link rel="icon" type="image/x-icon" href="syncro favicon.png">
+</head>
+<body>
+    <div class="col-12" id="header">
+        <h1 class="titolininav" id="nav-left">SYNCRO</h1>
+        <h1 class="titolininav" id="nav-right">FAI IL TEST</h1>
+    </div>
+    <div class="col-12" id="welcome">
+    </div>
+    <div class="col-3" id="nave">
+        <h2 data-target="project-section" onclick="scrollToSection(event)">01. Il progetto</h2>
+        <h2 data-target="test-section" onclick="scrollToSection(event)">02. Il test</h2>
+        <h2 data-target="research-section" onclick="scrollToSection(event)">03. La ricerca</h2>
+        <h2 data-target="about-section" onclick="scrollToSection(event)">04. Chi siamo</h2>
+    </div>
+    <div class="col-6" id="content">
+        <div class="spacer" id="project-section"></div>
+        <div class="title-container"></div>
+        <p>La Gen Z è spesso descritta come quella più consapevole, ma anche più sovraccarica, di 
+            tutte le generazioni precedenti. Cresciuti in un mondo di iper-connessione digitale, crisi 
+            globali e richieste sociali pressanti, i membri di questa si trovano a navigare una realtà 
+            che raramente rallenta. Tale velocità ha plasmato la loro visione del mondo, creando aspettative 
+            irrealistiche su cosa significhi “stare al passo”. La pressione che li costringe ad essere 
+            costantemente attivi, produttivi e presenti può spingere molti a ignorare il proprio ritmo naturale, 
+            cercando di adattarsi a un modello di vita che non li rappresenta e che, spesso, rischia di tradursi 
+            in ansia, stress e insoddisfazione. Il pericolo più grande è proprio quello di trovarsi intrappolati 
+            in un ciclo infinito, senza mai fermarsi e domandarsi se il ritmo che stanno seguendo è davvero quello giusto per loro.</p>
+        <p>La velocità, infatti, non è sempre sinonimo di efficienza o di successo: la fretta porta a decisioni affrettate, 
+            a un senso di incompletezza e a un esaurimento emotivo, specialmente per giovani impegnati su svariati fronti, 
+            quali equilibrio tra vita privata e professionale, relazioni, giustizia sociale e sostenibilità ambientale. 
+            Pertanto, per una generazione già ampiamente conscia dell'importanza di prendersi cura di sé stessi, 
+            sia fisicamente che mentalmente, riconoscere e rispettare il proprio ritmo personale non è solo una questione di 
+            sopravvivenza, ma una vera e propria strategia per il raggiungimento del benessere.</p>
+        <div class="img-container">
+            <img class="img-small" src="pasta_lover.jpeg">
+        </div>
+        <p>Tuttavia, il passo successivo è quello di tradurre questa consapevolezza in azioni concrete: rallentare quando necessario, 
+            ascoltare i segnali del proprio corpo, scegliere uno stile di vita che rispecchi le proprie esigenze. E non è sempre 
+            facile come sembra interrompere il flusso, specialmente quando entrano in gioco bias cognitivi e automatismi che 
+            condizionano qualsiasi aspetto della vita. Riconoscerli e scardinarli risulta pertanto essenziale per permettersi 
+            di vivere secondo il proprio ritmo, anche se ciò significa avere il coraggio di mettere in discussione le convenzioni 
+            sociali e prendersi il tempo necessario per perseguire obiettivi significativi, invece di inseguire costantemente un successo definito da altri.</p>
+        <img src="tendono a cadere.jpeg">
+        <p>In tutto ciò, la mobilità gioca un ruolo fondamentale: la Gen Z vuole avere la possibilità di scegliere i mezzi di trasporto che 
+            meglio si adattano al proprio stile di vita e alle proprie necessità, sia pratiche che emotive. Ciò può significare optare 
+            per un tragitto a piedi per rilassarsi, utilizzare il trasporto pubblico per ridurre l'impatto ambientale, o preferire una 
+            soluzione di ride-sharing per ottimizzare il tempo.</p>
+        <p>Il punto centrale è che la mobilità non risulta solo un mezzo per spostarsi da un luogo all'altro, è piuttosto un riflesso 
+            delle loro priorità e del loro ritmo personale, in cui la possibilità di scegliere come muoversi rappresenta una forma di 
+            autonomia e di libertà. In un mondo che spesso corre troppo veloce, questa generazione ha il compito - e la possibilità - 
+            di ridefinire cosa significa davvero vivere con equilibrio. Che si tratti dunque di gestire il tempo o affrontare le sfide 
+            quotidiane, il ritmo non è una regola universale, bensì un atto di consapevolezza e di cura verso sé stessi. Seguire quel 
+            ritmo, unico e personale, è la chiave per raggiungere il tanto agognato benessere.</p>
+        <p>A livello progettuale, ciò si traduce nella promessa di fornire gli strumenti per riuscire a vivere 
+            la mobilità più in linea con il proprio benessere personale. Per riuscirci, è necessario riconoscere 
+            e valorizzare il proprio ritmo, così da poter compiere scelte consapevoli, interrompere gli automatismi, 
+            modificare i propri schemi comportamentali, scardinando i bias cognitivi e le convinzioni che ci affliggono.</p>
+        <div class="spacer" id="test-section"></div>
+        <div class="title-container"></div>
+        
+        <div class="img-container">
+            <img class="img-small" src="pasta_lover.jpeg">
+        </div>
+        <div class="btn-container">
+            <button class="btn dual" onclick="openRitmario()">Ritmario</button>
+            <button class="btn dual">Vai al test</button>
+        </div>
+        <div class="spacer" id="research-section"></div>
+        <div class="title-container"></div>
+        <p>Dal car pooling allo sharing, dalle auto elettriche ai monopattini, sono le generazioni più giovani a modificare 
+            le abitudini e i paradigmi della mobilità, trasformando radicalmente tutti quei comportamenti una volta considerati immutabili.
+            Oggi più che mai, le esigenze dei giovani si stanno evolvendo a favore di tematiche che non riguardano soltanto la 
+            praticità e l'efficienza, ma anche aspetti più profondi, tra cui il benessere personale.</p>
+        <p>Le statistiche raccolte da NextWaveGenZ all'inizio del 2024 mostrano infatti come un ragazzo della Gen Z su quattro 
+            sperimenti un disagio emotivo maggiore (25%), quasi il doppio dei livelli riportati dai millennial e dai Gen X intervistati. 
+            Ne deriva un dato chiave: il 72% dei giovani del campione considera il benessere personale una priorità quotidiana, driver 
+            fondamentale di ogni scelta di vita, specialmente nello scenario della mobilità.</p>
+        <div class="img-container">
+            <img class="img-small" src="pasta_lover.jpeg">
+        </div>
+        <p>Proprio per questo, la generazione Z non si accontenta di mezzi di trasporto che soddisfano esclusivamente le necessità pratiche, 
+            bensì ricercano alternative in grado di riflettere una comprensione più profonda ed olistica del benessere, ben integrata nel quotidiano. 
+            Tale intento si traduce concretamente nella scelta di mezzi di trasporto che offrano un'esperienza piacevole e che minimizzino il malessere; 
+            ne sono un esempio le varie soluzioni intermodali che combinano più mezzi o alternative come la micro-mobilità, con bici e monopattini elettrici, 
+            che permettono di evitare traffico e ingorghi, spesso causa di forte frustrazione.<br>
+            Secondo il rapporto Shifting Gears di carsales e CrowdDNA (2022), la Generazione Z si distingue dalle precedenti proprio per l'approccio flessibile: 
+            è incline a scegliere soluzioni di trasporto che rispecchiano le loro esigenze momentanee e il loro stile di vita, senza vincolarsi a un unico metodo.</p>
+        <div class="img-container">
+            <img class="img-small" src="pasta_lover.jpeg">
+        </div>
+        <p>In questo contesto, il futuro della mobilità non sarà caratterizzato solamente da tecnologie avanzate bensì, anzitutto, da una significativa attenzione 
+            alle necessità emotive e sociali. I servizi di mobilità che riusciranno a combinare efficienza, sostenibilità e benessere personale avranno maggiori 
+            probabilità di essere adottati dalle nuove generazioni, contribuendo così a creare città più vivibili e un tessuto sociale più coeso e sicuro.</p>
+        <div class="btn-container">
+            <button class="btn" onclick="downloadReport()">Scarica il report</button>
+        </div>
+        <div class="spacer" id="about-section"></div>
+        <div class="title-container"></div>
+        <p>Siamo Syncro, un gruppo di giovani designer che offre servizi di progettazione nel settore della comunicazione. Il nostro team poliedrico nasce 
+            dall'incontro tra background di product e communication design, creando un mix di competenze che spaziano dall'analisi strategica alla creatività pura. 
+            Ci distinguiamo per il nostro approccio umano, empatico ma anche audace, il quale ci permette di costruire relazioni di fiducia con i nostri clienti e 
+            offrire loro un'esperienza unica, fatta di vicinanza e sicurezza. Ci proponiamo infatti come partner strategico e creativo, al fianco di chiunque voglia 
+            distinguersi grazie a questo, in maniera autentica, innovativa e in linea con i propri valori.</p>
+        <p>La nostra vision è rappresentare lo spirito di cambiamento della nostra generazione, promuovendo la comunicazione come strumento identitario e strategico, 
+            capace di valorizzare tanto il singolo quanto il brand. Crediamo nel ritmo come ottica interpretativa ed operativa per il raggiungimento del benessere 
+            personale. Attraverso il nostro lavoro, sensibilizziamo e forniamo gli strumenti per compiere scelte più consapevoli, aiutando a sciogliere quei nodi 
+            invisibili che a volte ci trattengono, quali bias cognitivi, automatismi e schemi comportamentali limitanti, trasformandoli in spunti di cambiamento 
+            positivo. Per Syncro, la comunicazione non è solo un mezzo, ma un potente catalizzatore di evoluzione e consapevolezza.</p>
+        <div class="img-container">
+            <img class="img-small" src="pasta_lover.jpeg">
+        </div>
+    </div>
+    <div class="col-3" id="info">
+        <h2>A creative house and digital delve dedicated to creating and producing visual narratives.<br>2024<br>social vari<br>Laboratorio di sintesi</h2>
+    </div>
+    <div class="col-12" id="footer">
+        <div class="col-12">
+            <h3>Laboratorio di Sintesi Finale C2<br>
+                Corso di L. M. in Design della Comunicazione - Politecnico di Milano.<br>
+                Docenti: M. Ciancia, K. Goldoni, F. Piredda,  M. Ronchi.<br>
+                Tutor: S. Barozzi, G. Carbone, V. Dal Brun, S. Dall'Angelo.</h3>
+        </div>
+    </div>
+</body>
+<style>
+    body {
+        width: 100vw;
+        margin: 0;
+        background-color: black;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        row-gap: 2rem;
+        justify-content: space-between;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-3 {
+        width: 16.67%;
+        height: 100vh;
+    }
+
+    .titolininav {
+        font-size: 1.4rem;
+        font-family: sora;
+        color: white;
+        margin: 0;
+        top: 1.2rem;
+        margin-top: 1rem;
+
+    }
+
+    #nav-left{
+        margin-left: 1.2rem;
+    }
+
+    #nav-right{
+        margin-right: 1.2rem;
+    }
+
+    #header {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        z-index: 200;
+    }
+
+    #welcome {
+        /*background-color: purple;*/
+        height: 100vh;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        font-family: sora;
+        font-weight: 400;
+        color: white;
+        margin: 0;
+        top: 1.2rem;
+        margin-top: 1.2rem;
+
+    }
+
+    #nave {
+        /*background-color: aquamarine;*/
+        position: sticky;
+        top: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 1.2rem;
+    }
+
+    #nave h2{
+        margin: 0;
+        margin-left: 1.2rem;
+        cursor: pointer;
+    }
+
+    #info {
+        /*background-color: red;*/
+        position: sticky;
+        top: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 1.2rem;
+    }
+
+    #info h2{
+        margin: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    #content {
+        /*background-color: blue;*/
+        overflow-y: scroll;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        row-gap: 1rem;
+    }
+
+    #content p{
+        font-size: 1.2rem;
+        font-family: sora;
+        font-weight: 400;
+        color: white;
+        margin: 0;
+        top: 1rem;
+    }
+
+    .title-container{
+        width: 100%;
+        height: 15vh;
+        background-color: green;
+    }
+
+    .spacer{
+        width: 100%;
+        height: 5vh;
+        background-color: black;
+    }
+
+    .img-container{
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-small{
+        width: 67%;
+    }
+
+    .img-biggie{
+        width: 100%;
+    }
+
+    .btn {
+        border: 2px solid black;
+        background-color: black;
+        padding: 14px 28px;
+        cursor: pointer;
+        border-color: white;
+        border-radius: 2rem;
+        height: 4rem;
+        
+        font-size: 1rem;
+        font-family: sora;
+        font-weight: 400;
+        color: white;
+    }
+
+    .dual{
+        width: 10rem;
+    }
+
+    .btn:hover {
+        background: white;
+        color: black;
+
+        transition: 50ms linear;
+    }
+
+    .btn-container{
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        gap: 1.2rem;
+    }
+
+    #footer {
+        /*background-color: red;*/
+        z-index: 200;;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    #footer h3{
+        font-size: 1.2rem;
+        font-family: sora;
+        font-weight: 400;
+        color: white;
+        margin: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+        opacity: 50%;
+    }
+</style>
+
+<script>
+    function scrollToSection(event) {
+        // Recupera il valore di data-target dall'elemento cliccato
+        const targetId = event.target.getAttribute('data-target');
+        const targetElement = document.getElementById(targetId);
+
+        // Se l'elemento esiste, esegui lo scroll
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' }); // Scroll fluido
+        }
+    }
+
+    function openRitmario() {
+        window.open('ritmario.html', '_blank');
+    }
+
+    function openTest() {
+        window.open('test.html', '_blank');
+    }
+
+    function downloadReport() {
+        const newTab = window.open('report.pdf', '_blank'); // Apre il PDF in una nuova scheda
+        newTab.focus();
+    }
+</script>
+</html>

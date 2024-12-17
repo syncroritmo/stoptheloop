@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RITMO type Test</title>
+    <link rel="icon" type="image/x-icon" href="syncro favicon.png">
+</head>
+<body class="no-scroll">
+    <div class="col-12" id="header">
+        <h1 class="titolininav" id="nav-left">syncro</h1>
+        <img class="titolininav" id="stoptheloop" src="test media/STOP THE LOOP.png">
+        <nav class="burger-menu">
+            <div class="nav-container">
+                <input class="checkbox" type="checkbox" id="menu-toggle" />
+                <div class="menu-button-container" onclick="toggleMenu()">
+                    <div class="menu-button"></div>
+                </div>
+                <div class="paroline">
+                    <a href="landing.html">Home</a>
+                    <a href="ritmario.html">RitmoType</a>
+                    <a href="ritmotest.html">Test</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="background-image">
+    </div>
+    <div id="intro-container" class="col-6" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center;">
+        <h1 class="introbold">Servono solo 16 domande<br>per assegnarti un</h1>
+        <h1 id="ritmotype2">RITMO<br><i>type</i></h1>
+        <div id="background-image"></div>
+        <div>
+            <button id="startbtn" class="btn dual">inizia il test</button>
+            <p class="tempistica">Ci metterai solo 5 minuti</p>
+        </div>
+    </div>
+    <div class="quiz-container" style="display: none;">
+        <!-- Contenitore per le domande -->
+        <div id="question-container">
+            <h1 id="ritmotype">RITMO<br><i>type</i></h1>
+            <div id="question"></div> <!-- La domanda sarà visualizzata qui -->
+            <div id="answer-scale" class="answer-list">
+                <ul>
+                    <li>
+                        <input type="radio" id="answer-0" name="answers">
+                        <label for="answer-0"><span>Risposta 1</span></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="answer-1" name="answers">
+                        <label for="answer-1"><span>Risposta 2</span></label>
+                    </li>
+                </ul>
+            </div>
+            <!-- Bottoni -->
+            <div class="btn-container">
+                <button id="submit-button" class="btn dual" disabled>invia</button>
+            </div>
+            <div class="col-12" id="bar-container">
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="result-container" style="display: none;">
+        
+    </div>
+</body>
+
+<style>
+    /*BURGER MENU*/
+    .no-scroll {
+        overflow: hidden;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .checkbox {
+        display: none;
+    }
+
+    .menu-button-container {
+        height: 100%;
+        width: 30px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra verticalmente */
+        align-items: center; /* Centra orizzontalmente */
+        z-index: 1500;
+    }
+
+    .menu-button,
+    .menu-button::before,
+    .menu-button::after {
+        display: block;
+        background-color: #fff;
+        position: absolute;
+        height: 0.8vw;
+        width: 7.2vw;
+        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        border-radius: 2px;
+    }
+
+    .menu-button::before {
+        content: '';
+        margin-top: -8px;
+    }
+
+    .menu-button::after {
+        content: '';
+        margin-top: 8px;
+    }
+
+    #menu-toggle:checked + .menu-button-container .menu-button::before {
+        margin-top: 0px;
+        transform: rotate(405deg);
+    }
+
+    #menu-toggle:checked + .menu-button-container .menu-button {
+        background: rgba(255, 255, 255, 0);
+    }
+
+    #menu-toggle:checked + .menu-button-container .menu-button::after {
+        margin-top: 0px;
+        transform: rotate(-405deg);
+    }
+
+    @media (max-width: 600px) {
+        .burger-menu {
+            display: flex;
+        }
+
+        .nav-container {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav-container .checkbox {
+            position: absolute;
+            display: block;
+            width: 2vw;
+            right: 0;
+            z-index: 9999;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .paroline {
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            transform: translate(+150%);
+            transition: transform 0.5s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 9vw;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 999; /* Assegna un z-index inferiore */
+            text-transform: uppercase;
+            top: -7.8vw;
+            right: -3.6vw;
+        }
+
+        .paroline li {
+            font-size: 5vw;
+            font-weight: 600;
+            color: white;
+        }
+
+        /* Animazioni del menu burger */
+        input[type="checkbox"]:checked ~ .paroline {
+            transform: translateX(0);
+        }
+    }
+
+    /*CONTENT*/
+
+    #ritmotype{
+        line-height: 0.7;
+        margin-top: 0;
+        margin-bottom: 4vw;
+        font-size: 2.4vw;
+    }
+
+    #ritmotype2{
+        font-size: 4.8vw;
+        line-height: 0.7;
+    }
+
+    /* Stile generale */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: Sora, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    body i {
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-weight: 400;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .titolininav {
+        font-size: 1.4vw;
+        font-family: sora;
+        color: white;
+        margin: 0;
+        top: 1.2rem;
+        margin-top: 1rem;
+        font-weight: 500;
+    }
+
+    #nav-left{
+        margin-left: 1.2rem;
+    }
+
+    #nav-right{
+        margin-right: 1.2rem;
+    }
+
+    #stoptheloop{
+        margin-top: 1.6rem;
+        width: 6vw;
+        margin-right: 1.2rem;
+    }
+
+    #header {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        z-index: 200;
+    }
+
+    #intro-container {
+        display: none; /* Nascondi la schermata iniziale per il caricamento iniziale */
+        color: #ffffff;
+        font-family: Sora, sans-serif;
+        gap:7vw;
+    }
+
+    .introbold{
+        font-size: 2.4vw;
+        font-weight: 400;
+        margin: 0;
+        margin-top: 4vw;
+    }
+
+    .tempistica{
+        font-weight: 400;
+        font-size: 1.2vw;
+        margin-top: 2vw;
+    }
+
+    /* Contenitore del quiz */
+    .quiz-container {
+        width: 50%;
+        height: 100vh; /* Altezza costante */
+        display: flex; 
+        flex-direction: column;
+        justify-content: center; /* Distribuzione uniforme */
+        align-items: stretch; /* Allinea gli elementi al bordo sinistro */
+        box-sizing: border-box; /* Considera il padding */
+    }
+
+    #bar-container {
+        display: flex;
+        justify-content: center;
+        gap: 0.6vw; /* Spazio tra i pallini */
+        margin-top: 3vw;
+    }
+
+    .progress-dot {
+        width: 1.2vw;
+        height: 1.2vw;
+        background: #414141; /* Colore predefinito (grigio) */
+        border-radius: 50%; /* Forma circolare */
+        transition: background-color 0.3s ease; /* Transizione per il cambio colore */
+    }
+
+    .progress-dot.active {
+        background: #ffffff; /* Colore attivo (bianco) */
+    }
+
+    /* Domanda */
+    #question {
+        height: 14vh;
+        font-size: 1.8vw;
+        font-weight: 600;
+        text-align: left; /* Allinea il testo a sinistra */
+        flex: 0 0 auto; /* Altezza fissa */
+        display: flex;
+        align-items: flex-start; /* Inizio della sezione */
+    }
+
+    /* Risposte */
+    .answer-list {
+        height: 32vh;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        flex: 1; /* Occupa lo spazio disponibile */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Distribuzione uniforme delle risposte */
+    }
+
+    .answer-list li {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        cursor: pointer;
+    }
+
+    .answer-list input[type="radio"] {
+        display: none; /* Nasconde il radio button */
+    }
+
+    .answer-list label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .answer-list label::before {
+        content: "";
+        display: inline-block;
+        width: 2vw;
+        height: 2vw;
+        background-color: #414141;
+        border: 2px solid #414141;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+    .answer-list input[type="radio"]:checked + label::before {
+        background-color: #ffffff;
+        border: 2px solid #ffffff;
+    }
+
+    .answer-list label span {
+        font-size: 1.4vw;
+    }
+
+    /* Bottoni */
+    .btn {
+        border: 2px solid black;
+        background-color: white;
+        padding: 1vw 2vw;
+        cursor: pointer;
+        border-color: white;
+        border-radius: 6vw;
+        height: 4.4vw;
+
+        font-size: 1.4vw;
+        font-family: sora;
+        font-weight: 600;
+        color: black;
+    }
+
+    .dual {
+        width: 12vw;
+    }
+
+    #startbtn{
+        width: 14vw;
+    }
+
+    .btn:hover {
+        background: black;
+        color: white;
+        transition: 50ms linear;
+    }
+
+    .btn-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        position: relative; /* Posizionamento statico */
+        flex-shrink: 0; /* Mantieni la dimensione */
+    }
+
+    button:disabled {
+        cursor: not-allowed;
+    }
+
+    /* Risultato */
+    #result-container {
+        margin-top: 20px;
+    }
+
+    #background-image {
+        position: fixed; /* Mantiene l'immagine fissa */
+        top: 0;
+        left: 0;
+        width: 100%; /* Larghezza predefinita per tutte le immagini */
+        height: 100%; /* Altezza che copre tutta la schermata */
+        z-index: -1; /* Sfondo dietro tutto */
+    }
+
+    .intro-background {
+        background-image: url('test media/test_start_bg.png'); /* Immagine per intro-container */
+        background-size: cover; /* Copre l'intera area */
+        background-position: center; /* Centra l'immagine */
+        background-repeat: no-repeat; /* Evita ripetizioni */
+    }
+
+    .quiz-background {
+        background-image: url('test media/test bg.png'); /* Immagine per quiz-container */
+        background-size: 100% auto; /* Larghezza 100%, altezza proporzionale */
+        background-position: bottom; /* Allinea in basso */
+        background-repeat: no-repeat; /* Evita ripetizioni */
+    }
+
+    @media (max-width: 600px) {
+        body, html {
+            height: 100%;
+            overflow: hidden; /* Disabilita lo scroll */
+        }
+
+        .intro-container, #intro-container {
+            height: 100vh; /* Assicura che non superino la viewport */
+        }
+
+        .titolininav {
+            font-size: 5.4vw;
+        }
+
+        #nav-left {
+            margin-top: 1.4rem;
+        }
+        
+        #stoptheloop{
+           display: none;
+        }
+
+        .burger-menu{
+            margin-top: 1.6rem;
+            
+            margin-right: 1.2rem;
+        }
+
+        .col-6{
+            width: 100%
+        }
+
+        .introbold{
+            font-size: 4.8vw;
+        }
+
+        #ritmotype2 {
+            font-size: 14vw;
+        }
+
+        #startbtn{
+            width: 50vw;
+        }
+
+        .btn{
+            height: 14vw;
+            border-radius: 10vw;
+            font-size: 5.4vw;
+        }
+
+        .tempistica {
+            font-weight: 400;
+            font-size: 3.2vw;
+            margin-top: 5vw;
+        }
+
+        #background-image{
+            display: none;
+        }
+
+        .dual {
+            width: 50vw;
+        }
+
+        .quiz-container {
+            width: 80vw;
+        }
+
+        #question {
+            height: 14vh;
+            font-size: 3.8vw;
+        }
+
+        .answer-list label span {
+            font-size: 3.2vw;
+        }
+
+        #ritmotype {
+            margin-top: 0;
+            margin-bottom: 12vw;
+            font-size: 8.8vw;
+        }
+
+        .progress-dot {
+            width: 3.2vw;
+            height: 3.2vw;
+        }
+
+        #bar-container {
+            display: flex;
+            justify-content: center;
+            gap: 1.6vw;
+            margin-top:8vw;
+        }
+    }
+</style>
+
+<script>
+    //BURGER MENU
+    const checkbox = document.querySelector('.checkbox');
+
+    // Funzione per attivare/disattivare la checkbox
+    function toggleMenu() {
+        checkbox.checked = !checkbox.checked; // Cambia lo stato della checkbox
+        // Aggiungi o rimuovi la classe no-scroll in base allo stato
+        if (checkbox.checked) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
+    }
+
+    // Aggiungi un listener di evento per controllare se il menu è aperto o chiuso
+    checkbox.addEventListener('change', function () {
+        if (this.checked) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
+    });
+
+    // Dichiarazione delle variabili per i ruoli
+    let singer = 0;
+    let author = 0;
+    let producer = 0;
+    let deejay = 0;
+
+    let lento = 0;
+    let veloce = 0;
+
+    let regolare = 0;
+    let irregolare = 0;
+
+    function getQuestionVersion() {
+        if (singer === author && singer > deejay && singer > producer) {
+            return 1; // versione 1
+        } else if (producer === deejay && producer > singer && producer > author) {
+            return 2; // versione 2
+        } else if (singer === producer && singer > deejay && singer > author) {
+            return 3; // versione 3
+        } else if (author === deejay && author > singer && author > producer) {
+            return 4; // versione 4
+        } else if (singer === deejay && singer > producer && singer > author) {
+            return 5; // versione 5
+        } else if (author === producer && author > singer && author > deejay) {
+            return 6; // versione 6
+        } else {
+            return 0; // versione predefinita
+        }
+    }
+    
+    // Array delle domande e risposte
+    const questions = [
+        //prima sezione (ritmotype)
+        {
+            question: "Quando hai del tempo libero, ti capita mai di sentirti “in colpa” per non fare qualcosa di produttivo?",
+            answers: [
+                { text: "Spesso, mi sembra di perdere tempo", action: () => producer++ },
+                { text: "A volte, ma ho bisogno di tempo per me", action: () => singer++ },
+                { text: "Raramente, perché di solito sto in compagnia", action: () => deejay++ },
+                { text: "Perché dovrei sentirmi in colpa?", action: () => author++ },
+            ],
+        },
+        {
+            question: "Quanto è importante per te avere delle interazioni con altre persone durante la giornata?",
+            answers: [
+                { text: "Fondamentale, con le persone mi ricarico", action: () => deejay++ },
+                { text: "Abbastanza, ma talvolta ho bisogno di tempo per me", action: () => author++ },
+                { text: "Poco, preferisco stare nel mio", action: () => singer++ },
+                { text: "Dipende, se si incastrano nella mia schedule", action: () => producer++ },
+            ],
+        },
+        {
+            question: "Durante un ipotetico viaggio in autobus, che tipologia di viaggiatore saresti?",
+            answers: [
+                { text: "Mi immergo nei pensieri", action: () => singer++ },
+                { text: "Osservo i dettagli del paesaggio dal finestrino", action: () => author++ },
+                { text: "Organizzo mentalmente le prossime cose da fare", action: () => producer++ },
+                { text: "Interagisco con gli altri o sento un amic*", action: () => deejay++ },
+            ],
+        },
+        {
+            question: "Se ti venisse proposto di sperimentare o di intraprendere una nuova attività, accetteresti?",
+            answers: [
+                { text: "Evito, non voglio perdere tempo", action: () => producer++ },
+                { text: "Forse, dipende dall'attività", action: () => singer++ },
+                { text: "Sì, ma solo se in compagnia", action: () => deejay++ },
+                { text: "Certo, non vedo l'ora di fare nuove esperienze", action: () => author++ },
+            ],
+        },
+        {
+            question: "Che tipo di relazione si crea tra la tua vita personale e la tua vita professionale?",
+            answers: [
+                { text: "Spesso si sovrappongono", action: () => deejay++ },
+                { text: "Lavoro per vivere, non vivo per lavorare", action: () => author++ },
+                { text: "Prima il dovere, poi il piacere", action: () => producer++ },
+                { text: "Cerco un equilibrio tra le due", action: () => singer++ },
+            ],
+        },
+
+        //seconda sezione (sotto-ritmotype)
+        {
+            question: "Nel caso di una giornata piena di spostamenti, come affronteresti i tuoi impegni?",
+            answers: [
+                { text: "Mi organizzo con calma, rispettando i miei ritmi", action: () => lento++ },
+                { text: "Cerco di fare tutto rapidamente, senza perdere tempo", action: () => veloce++ },
+                { text: "Mi adatto alle necessità della giornata senza correre", action: () => lento++ },
+                { text: "Mi muovo velocemente per rispettare le scadenze", action: () => veloce++ },
+            ],
+        },
+        {
+            question: "Ti capita mai di dover “correre” per completare tutte le attività della tua giornata?",
+            answers: [
+                { text: "Ormai fa parte della mia routine", action: () => veloce++ },
+                { text: "Sì, mi succede spesso", action: () => veloce++ },
+                { text: "Qualche volta mi succede, ma raramente", action: () => lento++ },
+                { text: "No, non mi capita mai", action: () => lento++ },
+            ],
+        },
+        {
+            question: "Quando arrivi in stazione o alla fermata di un mezzo, come ti comporti solitamente?",
+            answers: [
+                { text: "Arrivo con anticipo per evitare fretta o stress", action: () => lento++ },
+                { text: "Mi muovo velocemente e arrivo poco prima della partenza", action: () => veloce++ },
+                { text: "Arrivo con calma, ma sempre nei tempi giusti", action: () => lento++ },
+                { text: "Mi muovo rapidamente e cerco di sfruttare ogni minuto", action: () => veloce++ },
+            ],
+        },
+        {
+            question: "Se dovessi scegliere un percorso per spostarti, quale di questi itinerari preferiresti?",
+            answers: [
+                { text: "Quello più tranquillo, anche se più lungo", action: () => lento++ },
+                { text: "Quello più veloce, anche se caotico", action: () => veloce++ },
+                { text: "Uno che mi permetta di rispettare i miei tempi", action: () => lento++ },
+                { text: "Quello che mi faccia guadagnare tempo", action: () => veloce++ },
+            ],
+        },
+        {
+            question: "Pensi di avere un buon equilibrio tra momenti di attività e momenti di pausa durante la giornata?",
+            answers: [
+                { text: "Sì, mi ritaglio sempre del tempo per ricaricarmi", action: () => lento++ },
+                { text: "Abbastanza, anche se non è sempre facile", action: () => veloce++ },
+                { text: "No, mi sento spesso stanco/a", action: () => veloce++ },
+                { text: "Dipende dai giorni, cerco di adattarmi", action: () => lento++ },
+            ],
+        },
+
+        //terza sezione (sotto-ritmotype)
+        {
+            question: "Come vivi l'abitudine all'interno della tua vita e nella tua routine? La soffri o la apprezzi?",
+            answers: [
+                { text: "La reputo necessaria perché mi fa sentire a mio agio", action: () => regolare++ },
+                { text: "Mi fa stare bene, ma ogni tanto ho bisogno di cambiare", action: () => regolare++ },
+                { text: "Mi piace variare, ma ogni tanto ho bisogno di punti fermi", action: () => irregolare++ },
+                { text: "Soffro la monotonia e cerco di evitarla", action: () => irregolare++ },
+            ],
+        },
+        {
+            question: "Quanto ti piace variare il tuo percorso abituale o preferisci avere dei punti fissi?",
+            answers: [
+                { text: "Preferisco mantenerlo invariato per comodità", action: () => regolare++ },
+                { text: "Mi piace cambiare ogni tanto, ma senza esagerare", action: () => regolare++ },
+                { text: "Cerco sempre nuovi percorsi per evitare la monotonia", action: () => irregolare++ },
+                { text: "Amo cambiare spesso per vivere esperienze diverse", action: () => irregolare++ },
+            ],
+        },
+        {
+            question: "Quanto spesso pianifichi gli spostamenti che devi fare all'interno della giornata?",
+            answers: [
+                { text: "Li pianifico in anticipo e seguo il mio plan", action: () => regolare++ },
+                { text: "Li pianifico, ma lascio qualche margine di flessibilità", action: () => regolare++ },
+                { text: "Preferisco improvvisare giorno per giorno", action: () => irregolare++ },
+                { text: "Non pianifico, mi piace decidere tutto sul momento", action: () => irregolare++ },
+            ],
+        },
+        {
+            question: "Durante un viaggio abituale, come gestiresti delle eventuali deviazioni di percorso?",
+            answers: [
+                { text: "Mi adatto facilmente senza cambiare i miei ritmi", action: () => regolare++ },
+                { text: "Quello più veloce, anche se caotico", action: () => irregolare++ },
+                { text: "Le considero un diversivo interessante", action: () => regolare++ },
+                { text: "Cerco di riportare tutto alla normalità il prima possibile", action: () => irregolare++ },
+            ],
+        },
+        {
+            question: "Come reagiresti se all'improvviso capitasse un imprevisto nella tua vita?",
+            answers: [
+                { text: "Lo accetto con calma, cercando di adattarmi", action: () => regolare++ },
+                { text: "Mi destabilizza, ma cerco di reagire in modo pratico", action: () => irregolare++ },
+                { text: "Pianifico una nuova soluzione e proseguo", action: () => regolare++ },
+                { text: "Procedo senza seguire schemi fissi", action: () => irregolare++ },
+            ],
+        },
+    ];
+
+    // Variabili per gestire punteggi e domande
+    let currentQuestionIndex = 0;
+    const scores = [];
+    const totalQuestions = questions.length;
+
+    // Elementi DOM
+    const questionContainer = document.getElementById("question-container");
+    const questionElement = document.getElementById("question");
+    const answerScale = document.getElementById("answer-scale");
+    const resultContainer = document.getElementById("result-container");
+    const resultElement = document.getElementById("result");
+    const progressFill = document.getElementById("progress-fill");
+
+    // Funzione per avviare il quiz
+    function startQuiz() {
+        // Nascondi il contenitore dei risultati e mostra quello delle domande
+        resultContainer.style.display = "none";
+        questionContainer.style.display = "block";
+
+        // Inizializza i ruoli e mostra la prima domanda
+        singer = 0;
+        author = 0;
+        producer = 0;
+        deejay = 0;
+        currentQuestionIndex = 0;
+        scores.length = 0; // Reset punteggi
+
+        // Crea i pallini
+        createProgressDots();
+
+        // Mostra la prima domanda
+        showQuestion();
+    }
+
+    // Mostra la domanda attuale con risposte dinamiche
+    function updateProgressDots(currentIndex) {
+        const dots = document.querySelectorAll(".progress-dot");
+        dots.forEach((dot, index) => {
+            if (index <= currentIndex) {
+                dot.classList.add("active"); // Colora i pallini completati
+            } else {
+                dot.classList.remove("active"); // Ripristina lo stato predefinito
+            }
+        });
+    }
+
+    function showQuestion() {
+        const currentQuestion = questions[currentQuestionIndex];
+        questionElement.textContent = currentQuestion.question;
+
+        // Pulisci le risposte precedenti
+        answerScale.innerHTML = "";
+
+        // Inizialmente disabilita il pulsante "INVIA"
+        const submitButton = document.getElementById("submit-button");
+        submitButton.disabled = true;
+
+        // Aggiungi le risposte dinamicamente come elenco puntato
+        currentQuestion.answers.forEach((answer, index) => {
+            const listItem = document.createElement("li");
+
+            const radioInput = document.createElement("input");
+            radioInput.type = "radio";
+            radioInput.id = `answer-${index}`;
+            radioInput.name = "answers";
+            radioInput.addEventListener("change", () => {
+                selectedAnswer = answer.action;
+                submitButton.disabled = false; // Abilita il pulsante INVIA
+            });
+
+            const label = document.createElement("label");
+            label.htmlFor = `answer-${index}`;
+            label.innerHTML = `<span>${answer.text}</span>`;
+
+            listItem.appendChild(radioInput);
+            listItem.appendChild(label);
+            answerScale.appendChild(listItem);
+        });
+
+        // Aggiorna i pallini della barra di progresso
+        updateProgressDots(currentQuestionIndex);
+    }
+
+
+    function createProgressDots() {
+        const barContainer = document.getElementById("bar-container");
+        barContainer.innerHTML = ""; // Pulisci i pallini esistenti
+        for (let i = 0; i < totalQuestions; i++) {
+            const dot = document.createElement("div");
+            dot.classList.add("progress-dot");
+            barContainer.appendChild(dot);
+        }
+    }
+
+    const submitButton = document.getElementById("submit-button");
+    let selectedAnswer = null;
+
+    submitButton.addEventListener("click", () => {
+        if (selectedAnswer) {
+            // Esegui l'azione della risposta selezionata
+            selectedAnswer();
+
+            // Resetta la variabile
+            selectedAnswer = null;
+
+            // Passa alla domanda successiva
+            nextQuestion();
+        }
+    });
+
+    // Passa alla domanda successiva o mostra il risultato
+    function nextQuestion() {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < totalQuestions) {
+            showQuestion(); // Mostra la prossima domanda
+        } else {
+            showResult(); // Mostra il risultato
+        }
+    }
+
+    function calculateResult() {
+        // Determina il ruolo principale
+        const roles = { singer, author, producer, deejay };
+        const dominantRole = Object.keys(roles).reduce((a, b) => (roles[a] > roles[b] ? a : b));
+
+        // Determina il ritmo dominante
+        const dominantRhythm = {
+            tempo: lento > veloce ? "lento" : "veloce",
+            regularity: regolare > irregolare ? "regolare" : "irregolare",
+        };
+
+        // Mappa dei risultati
+        const results = {
+            singer: {
+                regolare: {
+                    lento: "the FLOW",
+                    veloce: "the AUTOTUNE",
+                },
+                irregolare: {
+                    lento: "the AD-LIB",
+                    veloce: "the SOLO",
+                },
+            },
+            author: {
+                regolare: {
+                    lento: "the VERSE",
+                    veloce: "the CHORUS",
+                },
+                irregolare: {
+                    lento: "the BRIDGE",
+                    veloce: "the TOPLINE",
+                },
+            },
+            producer: {
+                regolare: {
+                    lento: "the KEY",
+                    veloce: "the EQ",
+                },
+                irregolare: {
+                    lento: "the PAUSE",
+                    veloce: "the BEAT",
+                },
+            },
+            deejay: {
+                regolare: {
+                    lento: "the FADE",
+                    veloce: "the SYNC",
+                },
+                irregolare: {
+                    lento: "the REVERB",
+                    veloce: "the DROP",
+                },
+            },
+        };
+
+        // Calcola e restituisce il risultato
+        return results[dominantRole][dominantRhythm.regularity][dominantRhythm.tempo];
+    }
+
+    const resultLinks = {
+        "the FLOW": "theflow.html",
+        "the AD-LIB": "theadlib.html",
+        "the AUTOTUNE": "theautotune.html",
+        "the SOLO": "thesolo.html",
+        "the VERSE": "theverse.html",
+        "the BRIDGE": "thebridge.html",
+        "the CHORUS": "thechorus.html",
+        "the TOPLINE": "thetopline.html",
+        "the KEY": "thekey.html",
+        "the PAUSE": "thepause.html",
+        "the EQ": "theeq.html",
+        "the BEAT": "thebeat.html",
+        "the FADE": "thefade.html",
+        "the REVERB": "thereverb.html",
+        "the SYNC": "thesync.html",
+        "the DROP": "thedrop.html"
+    };
+
+    function showResult() {
+        // Nascondi l'intero contenitore del quiz
+        const quizContainer = document.querySelector(".quiz-container");
+        quizContainer.style.display = "none";
+
+        // Calcola il risultato
+        const result = calculateResult();
+
+        if (resultLinks[result]) {
+            // Reindirizza alla pagina corrispondente
+            window.location.href = resultLinks[result];
+        } else {
+            console.error("Nessun link trovato per il risultato:", result);
+        }
+
+        /*/ Mostra il contenitore dei risultati
+        resultContainer.style.display = "block";
+
+        // Nascondi tutti i div dei risultati
+        const resultDivs = document.querySelectorAll(".result");
+        resultDivs.forEach((div) => {
+            div.style.display = "none";
+        });
+
+        // Mostra solo il div del risultato calcolato
+        const resultDiv = document.getElementById(result.replace(" ", "-")); // Sostituisce spazi con "-"
+        if (resultDiv) {
+            resultDiv.style.display = "block";
+        }*/
+    }
+    
+    document.addEventListener("DOMContentLoaded", () => {
+        const introContainer = document.getElementById("intro-container");
+        const quizContainer = document.querySelector(".quiz-container");
+        const backgroundImage = document.getElementById("background-image");
+
+        // Mostra la schermata iniziale con il background dell'intro
+        introContainer.style.display = "flex";
+        backgroundImage.classList.add("intro-background");
+
+        // Gestisci il click sul bottone "INIZIA"
+        document.getElementById("startbtn").addEventListener("click", () => {
+            // Cambia la visibilità delle sezioni
+            introContainer.style.display = "none";
+            quizContainer.style.display = "flex";
+
+            // Cambia l'immagine di background
+            backgroundImage.classList.remove("intro-background");
+            backgroundImage.classList.add("quiz-background");
+
+            // Avvia il quiz
+            startQuiz();
+        });
+    });
+</script>
+</html>
