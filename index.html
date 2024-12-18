@@ -2,125 +2,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stop the Loop</title>
+    <title>Stop The Loop</title>
     <link rel="icon" type="image/x-icon" href="syncro favicon.png">
 </head>
 <body>
     <div class="col-12" id="header">
-        <h1 class="titolininav" id="nav-left">SYNCRO</h1>
-        <h1 class="titolininav" id="nav-right">FAI IL TEST</h1>
+        <h1 class="titolininav" id="nav-left" onclick="openHome()" style="cursor: pointer;">syncro</h1>
+        <img class="titolininav" id="stoptheloop" onclick="openTest()" src="./test media/STOP THE LOOP.png" style="cursor: pointer;">
     </div>
     <div class="col-12" id="welcome">
+        <img id="index-stop" src="./index_media/TYPE_STOP_THE_LOOP.webp">
+        <p class="tempistica">Ascolta il tuo ritmo, ascolta te stesso.</p>
+        <img id="index_welcome" src="./index_media/index_welcome.webp">
     </div>
     <div class="col-3" id="nave">
-        <h2 data-target="project-section" onclick="scrollToSection(event)">01. Il progetto</h2>
-        <h2 data-target="test-section" onclick="scrollToSection(event)">02. Il test</h2>
-        <h2 data-target="research-section" onclick="scrollToSection(event)">03. La ricerca</h2>
-        <h2 data-target="about-section" onclick="scrollToSection(event)">04. Chi siamo</h2>
+        <h2 data-target="project-section" onclick="scrollToSection(event)"><i>01.</i> Il progetto</h2>
+        <h2 data-target="research-section" onclick="scrollToSection(event)"><i>02.</i> La ricerca</h2>
+        <h2 data-target="test-section" onclick="scrollToSection(event)"><i>03.</i> Il test</h2>
+        <h2 data-target="about-section" onclick="scrollToSection(event)"><i>04.</i> Syncro</h2>
     </div>
     <div class="col-6" id="content">
-        <div class="spacer" id="project-section"></div>
-        <div class="title-container"></div>
-        <p>La Gen Z è spesso descritta come quella più consapevole, ma anche più sovraccarica, di 
-            tutte le generazioni precedenti. Cresciuti in un mondo di iper-connessione digitale, crisi 
-            globali e richieste sociali pressanti, i membri di questa si trovano a navigare una realtà 
-            che raramente rallenta. Tale velocità ha plasmato la loro visione del mondo, creando aspettative 
-            irrealistiche su cosa significhi “stare al passo”. La pressione che li costringe ad essere 
-            costantemente attivi, produttivi e presenti può spingere molti a ignorare il proprio ritmo naturale, 
-            cercando di adattarsi a un modello di vita che non li rappresenta e che, spesso, rischia di tradursi 
-            in ansia, stress e insoddisfazione. Il pericolo più grande è proprio quello di trovarsi intrappolati 
-            in un ciclo infinito, senza mai fermarsi e domandarsi se il ritmo che stanno seguendo è davvero quello giusto per loro.</p>
-        <p>La velocità, infatti, non è sempre sinonimo di efficienza o di successo: la fretta porta a decisioni affrettate, 
-            a un senso di incompletezza e a un esaurimento emotivo, specialmente per giovani impegnati su svariati fronti, 
-            quali equilibrio tra vita privata e professionale, relazioni, giustizia sociale e sostenibilità ambientale. 
-            Pertanto, per una generazione già ampiamente conscia dell'importanza di prendersi cura di sé stessi, 
-            sia fisicamente che mentalmente, riconoscere e rispettare il proprio ritmo personale non è solo una questione di 
-            sopravvivenza, ma una vera e propria strategia per il raggiungimento del benessere.</p>
-        <div class="img-container">
-            <img class="img-small" src="pasta_lover.jpeg">
+        <div class="spacer"></div>
+        <div class="single-p-mix">
+            <div>
+                <p id="citazione">Ferma il loop delle tue abitudini, scegli i mezzi giusti per te e sincronizzati con il tuo benessere.</p>
+            </div>
         </div>
-        <p>Tuttavia, il passo successivo è quello di tradurre questa consapevolezza in azioni concrete: rallentare quando necessario, 
-            ascoltare i segnali del proprio corpo, scegliere uno stile di vita che rispecchi le proprie esigenze. E non è sempre 
-            facile come sembra interrompere il flusso, specialmente quando entrano in gioco bias cognitivi e automatismi che 
-            condizionano qualsiasi aspetto della vita. Riconoscerli e scardinarli risulta pertanto essenziale per permettersi 
-            di vivere secondo il proprio ritmo, anche se ciò significa avere il coraggio di mettere in discussione le convenzioni 
-            sociali e prendersi il tempo necessario per perseguire obiettivi significativi, invece di inseguire costantemente un successo definito da altri.</p>
-        <img src="tendono a cadere.jpeg">
-        <p>In tutto ciò, la mobilità gioca un ruolo fondamentale: la Gen Z vuole avere la possibilità di scegliere i mezzi di trasporto che 
-            meglio si adattano al proprio stile di vita e alle proprie necessità, sia pratiche che emotive. Ciò può significare optare 
-            per un tragitto a piedi per rilassarsi, utilizzare il trasporto pubblico per ridurre l'impatto ambientale, o preferire una 
-            soluzione di ride-sharing per ottimizzare il tempo.</p>
-        <p>Il punto centrale è che la mobilità non risulta solo un mezzo per spostarsi da un luogo all'altro, è piuttosto un riflesso 
-            delle loro priorità e del loro ritmo personale, in cui la possibilità di scegliere come muoversi rappresenta una forma di 
-            autonomia e di libertà. In un mondo che spesso corre troppo veloce, questa generazione ha il compito - e la possibilità - 
-            di ridefinire cosa significa davvero vivere con equilibrio. Che si tratti dunque di gestire il tempo o affrontare le sfide 
-            quotidiane, il ritmo non è una regola universale, bensì un atto di consapevolezza e di cura verso sé stessi. Seguire quel 
-            ritmo, unico e personale, è la chiave per raggiungere il tanto agognato benessere.</p>
-        <p>A livello progettuale, ciò si traduce nella promessa di fornire gli strumenti per riuscire a vivere 
-            la mobilità più in linea con il proprio benessere personale. Per riuscirci, è necessario riconoscere 
-            e valorizzare il proprio ritmo, così da poter compiere scelte consapevoli, interrompere gli automatismi, 
-            modificare i propri schemi comportamentali, scardinando i bias cognitivi e le convinzioni che ci affliggono.</p>
-        <div class="spacer" id="test-section"></div>
-        <div class="title-container"></div>
-        
-        <div class="img-container">
-            <img class="img-small" src="pasta_lover.jpeg">
+        <div class="single-p-mix">
+            <div class="section-title"  id="project-section"><a><i>01.</i> PROGETTO</a></div>
+            <p>La Generazione Z vive in un mondo iper-connesso e carico di pressioni sociali che la spinge a stare costantemente al passo, sacrificando 
+                spesso il proprio benessere.<br>
+                La velocità che caratterizza la realtà di questa generazione genera aspettative irrealistiche e li allontana dal loro ritmo naturale, 
+                con conseguenze come ansia, stress e insoddisfazione.</p>
         </div>
-        <div class="btn-container">
-            <button class="btn dual" onclick="openRitmario()">Ritmario</button>
-            <button class="btn dual">Vai al test</button>
+        <img src="./index_media/index_pic_01.webp">
+        <div class="single-p-mix">
+            <p>Il pericolo più grande è proprio quello di trovarsi intrappolati in un ciclo infinito, senza mai fermarsi e domandarsi se il ritmo che stanno 
+                seguendo è davvero quello giusto per i giovani di oggi.<br><br>
+                Per questa generazione, consapevole dell’importanza della cura di sé, rispettare il proprio ritmo diventa essenziale per raggiungere un 
+                autentico benessere. Tuttavia, tradurre tale consapevolezza in azioni concrete richiede coraggio: rallentare, ascoltare i segnali del corpo 
+                e mettere in discussione schemi di vita dettati da convenzioni sociali.</p>
         </div>
-        <div class="spacer" id="research-section"></div>
-        <div class="title-container"></div>
-        <p>Dal car pooling allo sharing, dalle auto elettriche ai monopattini, sono le generazioni più giovani a modificare 
-            le abitudini e i paradigmi della mobilità, trasformando radicalmente tutti quei comportamenti una volta considerati immutabili.
-            Oggi più che mai, le esigenze dei giovani si stanno evolvendo a favore di tematiche che non riguardano soltanto la 
-            praticità e l'efficienza, ma anche aspetti più profondi, tra cui il benessere personale.</p>
-        <p>Le statistiche raccolte da NextWaveGenZ all'inizio del 2024 mostrano infatti come un ragazzo della Gen Z su quattro 
-            sperimenti un disagio emotivo maggiore (25%), quasi il doppio dei livelli riportati dai millennial e dai Gen X intervistati. 
-            Ne deriva un dato chiave: il 72% dei giovani del campione considera il benessere personale una priorità quotidiana, driver 
-            fondamentale di ogni scelta di vita, specialmente nello scenario della mobilità.</p>
-        <div class="img-container">
-            <img class="img-small" src="pasta_lover.jpeg">
+        <div class="single-p-mix">
+            <div class="title-container">PARTNER</div>
+            <p>L’intersezione tra i contributi di questi partner, coordinati da Syncro, dà vita a un progetto che pone il benessere personale al centro.</p>
         </div>
-        <p>Proprio per questo, la generazione Z non si accontenta di mezzi di trasporto che soddisfano esclusivamente le necessità pratiche, 
-            bensì ricercano alternative in grado di riflettere una comprensione più profonda ed olistica del benessere, ben integrata nel quotidiano. 
-            Tale intento si traduce concretamente nella scelta di mezzi di trasporto che offrano un'esperienza piacevole e che minimizzino il malessere; 
-            ne sono un esempio le varie soluzioni intermodali che combinano più mezzi o alternative come la micro-mobilità, con bici e monopattini elettrici, 
-            che permettono di evitare traffico e ingorghi, spesso causa di forte frustrazione.<br>
-            Secondo il rapporto Shifting Gears di carsales e CrowdDNA (2022), la Generazione Z si distingue dalle precedenti proprio per l'approccio flessibile: 
-            è incline a scegliere soluzioni di trasporto che rispecchiano le loro esigenze momentanee e il loro stile di vita, senza vincolarsi a un unico metodo.</p>
-        <div class="img-container">
-            <img class="img-small" src="pasta_lover.jpeg">
+        <img src="./index_media/index_pic_02.webp">
+        <div class="single-p-mix">
+            <div class="subtitle-container">TRENORD</div>
+            <p>Trenord, player della mobilità regionale, rappresenta il contesto in cui il progetto prende vita. La rete ferroviaria diventa il luogo 
+                ideale per trasformare il tempo di viaggio in un momento dedicato al benessere, consentendo ai fruitori di vivere un’esperienza di ascolto e 
+                riflessione. La mobilità si fa così non solo funzionale, ma anche una cornice per la crescita personale.</p>
+            <div class="subtitle-container">SPOTIFY</div>
+            <p>Spotify, leader nella fruizione di contenuti audio, contribuisce al progetto favorendo l’ascolto musicale personalizzato. Grazie al suo algoritmo 
+                per la creazione di playlist, gli utenti possono immergersi in un’esperienza audio su misura, che accompagna e amplifica i momenti di riflessione 
+                e connessione con sé stessi durante il viaggio.</p>
+            <div class="subtitle-container">HEADSPACE</div>
+            <p>Headspace, riferimento globale nel campo della mindfulness, porta il progetto a un livello più profondo favorendo l’ascolto di sé. Le sue conoscenze 
+                sulla consapevolezza e l’equilibrio mentale hanno permesso di introdurre interruzioni sonore studiate per promuovere momenti di introspezione e 
+                benessere mentale, trasformando l’esperienza sonora in uno strumento di crescita interiore.</p>
         </div>
-        <p>In questo contesto, il futuro della mobilità non sarà caratterizzato solamente da tecnologie avanzate bensì, anzitutto, da una significativa attenzione 
-            alle necessità emotive e sociali. I servizi di mobilità che riusciranno a combinare efficienza, sostenibilità e benessere personale avranno maggiori 
-            probabilità di essere adottati dalle nuove generazioni, contribuendo così a creare città più vivibili e un tessuto sociale più coeso e sicuro.</p>
-        <div class="btn-container">
-            <button class="btn" onclick="downloadReport()">Scarica il report</button>
+        <div class="single-p-mix">
+            <div class="title-container">STRATEGIA</div>
+            <p>La nostra campagna si divide in tre fasi strategiche: interruzione, consapevolezza ed empowement.</p>
+            <div class="subtitle-container">INTERRUZIONE</div>
+            <p>Il primo passo consiste nel rompere l'automatismo quotidiano del nostro pubblico, attirarando l’attenzione attraverso i nostri canali di comunicazione, 
+                come la come la campagna Out Of Home (OOH), il sito web e i profili Instagram e TikTok, predisponendo alla riflessione.</p>
         </div>
-        <div class="spacer" id="about-section"></div>
-        <div class="title-container"></div>
-        <p>Siamo Syncro, un gruppo di giovani designer che offre servizi di progettazione nel settore della comunicazione. Il nostro team poliedrico nasce 
-            dall'incontro tra background di product e communication design, creando un mix di competenze che spaziano dall'analisi strategica alla creatività pura. 
-            Ci distinguiamo per il nostro approccio umano, empatico ma anche audace, il quale ci permette di costruire relazioni di fiducia con i nostri clienti e 
-            offrire loro un'esperienza unica, fatta di vicinanza e sicurezza. Ci proponiamo infatti come partner strategico e creativo, al fianco di chiunque voglia 
-            distinguersi grazie a questo, in maniera autentica, innovativa e in linea con i propri valori.</p>
-        <p>La nostra vision è rappresentare lo spirito di cambiamento della nostra generazione, promuovendo la comunicazione come strumento identitario e strategico, 
-            capace di valorizzare tanto il singolo quanto il brand. Crediamo nel ritmo come ottica interpretativa ed operativa per il raggiungimento del benessere 
-            personale. Attraverso il nostro lavoro, sensibilizziamo e forniamo gli strumenti per compiere scelte più consapevoli, aiutando a sciogliere quei nodi 
-            invisibili che a volte ci trattengono, quali bias cognitivi, automatismi e schemi comportamentali limitanti, trasformandoli in spunti di cambiamento 
-            positivo. Per Syncro, la comunicazione non è solo un mezzo, ma un potente catalizzatore di evoluzione e consapevolezza.</p>
-        <div class="img-container">
-            <img class="img-small" src="pasta_lover.jpeg">
+        <div class="single-p-mix">
+            <p class="fotine-title">Banner & Poster</p>
+            <img class="fotine" src="./index_media/index_pic_04.webp">
+            <img class="fotine" src="./index_media/index_pic_05.webp">
+            <img class="fotine" src="./index_media/index_pic_06.webp">
+            <img class="fotine" src="./index_media/index_pic_07.webp">
+        </div>
+        <div class="single-p-mix">
+            <p class="fotine-title">Floor ADV</p>
+            <img class="fotine" src="./index_media/index_pic_08.webp">
+            <img class="fotine" src="./index_media/index_pic_09.webp">
+        </div>
+        <div class="single-p-mix">
+            <div class="subtitle-container">CONSAPEVOLEZZA</div>
+            <p>Durante la quale il test RytmoType aiuta a scoprire il proprio ritmo e a riflettere sulle scelte quotidiane legate alla mobilità.</p>
+        </div>
+        <div class="single-p-mix">
+            <div class="subtitle-container">EMPOWERMENT</div>
+            <p>Offre strumenti pratici e contenuti di approfondimento attraverso un canale Instagram dedicato, con consigli e spunti sul ritmo e il 
+                benessere mentale, per supportare il pubblico nella trasformazione della consapevolezza in azione concreta.</p>
+        </div>
+        <div class="single-p-mix">
+            <p class="fotine-title">CONTENUTI INSTAGRAM</p>
+            <img class="fotine" src="./index_media/index_pic_10.webp">
+        </div>
+        <div class="single-p-mix">
+            <div class="title-container">IDENTITÀ</div>
+            <p>Il concept e il design dei vari RitmoType prendono ispirazione dal mondo musicale e dal suo vocabolario. I nomi di ciascuno richiamano termini 
+                specifici della musica, come The Ad-lib o The Bridge, mentre le vibe (Singer, Author, Deejay e Producer) rimandano a ruoli chiave del panorama sonoro.</p>
+        </div>
+        <img class="fotine" src="./index_media/index_pic_11.webp">
+        <div class="single-p-mix">
+            <p>Anche l’identità visiva riflette questa ispirazione: la palette cromatica è composta da quattro colori principali, ciascuno associato ad una categoria di RitmoType, e 
+                utilizza quattro forme distintive che alternano spigolosità e rotondità in base al ritmo rappresentato.</p>
+        </div>
+        <img class="fotine" src="./index_media/index_pic_12.webp">
+        <img class="fotine" src="./index_media/index_pic_13.webp">
+        <div class="single-p-mix">
+            <div class="section-title"  id="research-section"><a><i>02.</i> RICERCA</a></div>
+            <img class="fotine" src="./index_media/index_pic_14.webp">
+        </div>
+        <div class="single-p-mix">
+            <p id="citazione">Quale sarà il futuro della mobilità in relazione al ritmo di vita e al benessere delle giovani generazioni?</p>
+            <p>Questo quesito è stato il punto di partenza della ricerca. Dal car pooling allo sharing, dalle auto elettriche ai monopattini, sono le generazioni più giovani a modificare le abitudini e i paradigmi della mobilità, 
+                trasformando radicalmente tutti quei comportamenti una volta considerati immutabili.</p>
+            <img class="fotine" src="./index_media/index_pic_15.webp">
+            <p>Oggi più che mai, le esigenze dei giovani si stanno evolvendo a favore di tematiche che non riguardano esclusivamente la praticità e 
+                l’efficienza, bensì anche aspetti più profondi, tra cui il benessere personale.</p>
+        </div>
+        <div class="single-p-mix">
+            <div class="title-container">BENESSERE</div>
+            <p>La Generazione Z è già molto sensibile al tema del benessere mentale: il 72% dei giovani considera la salute mentale importante, 
+                ma spesso fatica a mettere in atto l’ascolto di sé. La gestione del tempo e delle responsabilità rappresenta una sfida quotidiana, 
+                e il rispetto del proprio ritmo è essenziale per ridurre lo stress derivante da scadenze pressanti e impegni. Ottimizzare il tempo e 
+                gestire lo stress diventa essenziale, ma in alcuni contesti, come la mobilità, queste sfide si amplificano.</p>
+            <p class="fonti"><i>Fonte: https://www.wearepion.com/blog-posts/self-care-gen-z-mental-health</i></p>
+        </div>
+        <div class="single-p-mix">
+            <div class="title-container">SONDAGGIO</div>
+            <p>Secondo il sondaggio da noi svolto su 204 utenti appartenenti alla Gen Z e riguardante le abitudini all’interno del contesto della mobilità:</p>
+            <img class="fotine" src="./index_media/index_pic_16.webp">
+            <img class="fotine" src="./index_media/index_pic_17.webp">
+            <p>Le parole utilizzate ed associate più frequentemente dall'utenza alla mobilità del futuro sono state:</p>
+        </div>
+        <div class="single-p-mix">
+            <img class="fotine" src="./index_media/index_pic_18.webp">
+        </div>
+        <div class="single-p-mix">
+            <p>La maggioranza degli intervistati descrive così il proprio ritmo di vita:</p>
+        </div>
+        <div class="single-p-mix">
+            <img class="fotine" src="i./ndex_media/index_pic_19.webp">
+        </div>
+        <div class="single-p-mix">
+            <p>I dati evidenziano come le scelte di mobilità non siano dettate unicamente da esigenze pratiche, ma profondamente influenzate dalla 
+                frenesia dei contesti in cui gli intervistati vivono. Questa condizione spinge, spesso inconsapevolmente, a privilegiare mezzi più rapidi, seguendo 
+                sempre di più bias comportamentali che finiscono per consolidare abitudini poco equilibrate.</p>
+        </div>
+        <div class="single-p-mix">
+            <div class="btn-container">
+                <button class="btn" onclick="downloadReport()">scarica il report</button>
+            </div>
+        </div>
+        <div class="single-p-mix">
+            <div class="section-title"  id="test-section"><a><i>03.</i> TEST</a></div>
+            <p>Il test RitmoType è uno strumento innovativo, composto da 16 domande a risposta multipla, progettato per aiutare le persone a esplorare i propri 
+                comportamenti quotidiani, con un focus particolare sulla mobilità.<br><br>
+                I risultati del test vengono restituiti tramite una scheda personalizzata che sintetizza le dimensioni fondamentali del profilo. 
+                La restituzione si articola nei seguenti elementi.</p>
+            <div class="subtitle-container">DIMENSIONI FONDAMENTALI</div>
+            <p>Ogni RitmoType è descritto attraverso i parametri di Vibe, Frequenza e Andamento con un linguaggio coinvolgente e intuitivo.</p>
+            <div class="subtitle-container">DESCRIZIONE EVOCATIVA</div>
+            <p>Inoltre, è accompagnato da una bio ispirata al mondo musicale, che sintetizza in modo originale e metaforico le caratteristiche del profilo in questione.</p>
+            <div class="subtitle-container">CONNESSIONE CON LA MOBILITÀ</div>
+            <p>Ciascun Ritmo è collegato a pratici consigli di vita di tutti i giorni, concentrandosi della mobilità quotidiana e offrendo così spunti di riflessione per ottimizzare i propri spostamenti.</p>
+        </div>
+        <img class="fotine" src="./index_media/index_pic_20.webp">
+        <div class="single-p-mix">
+            <div class="subtitle-container">HIT & FLOP</div>
+            <p>In ogni profilo vengono inoltre evidenziati le cosiddette Hit (punti di forza) e i cosiddetti Flop (aspetti migliorabili), al fine di stimolare una riflessione critica e costruttiva riguardo il proprio stile di vita.</p>
+            <div class="subtitle-container">TOP FEAT.</div>
+            <p>La scheda evidenzia inoltre il Top Featuring, ovvero il RitmoType con il quali si è più affine e col quale si crea una forte sinergia collaborativa.</p>
+            <p><br>Con questo test, non solo si acquisisce una maggiore consapevolezza di sé, ma si apre anche la strada verso un equilibrio più autentico e soddisfacente.</p>
+            <p class="fonti"><i>Nota: il test non si basa su uno studio scientifico, ma è uno strumento esplorativo che mira soltanto a stimolare una riflessione personale.</i></p>
+        </div>
+        <div class="download-container">
+            <div class="btn-container">
+                <button class="btn btn-expl" onclick="openTest()">fai il test</button>
+                <button class="btn btn-expl" onclick="openRitmario()">esplora i ritmotype</button>
+            </div>
+        </div>
+        <div class="single-p-mix">
+            <div class="title-container">STOPLIST</div>
+            <p>Un elemento distintivo del progetto Stop The Loop sono le Stoplist, playlist realizzate con Spotify per ogni RitmoType sulla base delle proprie 
+                preferenze musicali individuali utilizzando l'algoritmo di profilazione dell'app. Queste sono progettate per far riflettere la persona, al fine 
+                di sincornizzarsi con se stesso. Le playlist hanno la caratteristica di contenere delle interruzioni, denominate Stop The Loop, ossia spazi sonori 
+                realizzati in collaborazione con Headspace e narrati dal team Syncro che intervallano la selezione di brani.</p>
+            <img class="fotine" src="./index_media/index_pic_21.webp">
+            <p>Questi interventi non solo incoraggiano un ascolto attento di sé, ma fungono anche da momenti di riflessione per verificare se il risultato del test 
+                rappresenta effettivamente il ritmo più adatto alle proprie esigenze. Studiate per favorire un processo di interiorizzazione del proprio RitmoType, 
+                gli Stop The Loop offrono inoltre l’opportunità di esplorare potenziali alternative di ritmo.</p>
+        </div>
+        <img class="fotine" src="./index_media/index_pic_22.webp">
+        <div class="download-container">
+            <div class="btn-container">
+                <button class="btn spoty" onclick="openSpotify()">Ascolta su Spotify</button>
+            </div>
+        </div>
+        <div class="single-p-mix">
+            <div class="section-title"  id="about-section"><a><i>04.</i> SYNCRO</a></div>
+            <div class="title-container">CHI SIAMO</div>
+            <p>Siamo un gruppo di giovani designer che offre servizi di progettazione nel settore della comunicazione. La nostra vision è rappresentare lo 
+                spirito di cambiamento della nostra generazione, promuovendo la comunicazione come strumento identitario e strategico, capace di valorizzare tanto
+                il singolo quanto il brand.</p>
+                <img class="fotine" src="./index_media/index_pic_23.webp">
+                <p>Il nostro team poliedrico nasce dall’incontro tra background di product e communication design, creando un mix di competenze che spaziano dall’analisi 
+                    strategica alla creatività pura. Crediamo nel ritmo come ottica interpretativa ed operativa per il raggiungimento del benessere personale.</p>
+        </div>
+        <img class="fotine" src="./index_media/index_pic_25.webp">
+        <div class="single-p-mix">
+            <p>Attraverso il nostro lavoro, sensibilizziamo e forniamo gli strumenti per compiere scelte più consapevoli, aiutando a sciogliere quei nodi invisibili 
+                che a volte ci trattengono, quali bias cognitivi, automatismi e schemi comportamentali limitanti, trasformandoli in spunti di cambiamento positivo. 
+                Per Syncro, la comunicazione non è solo un mezzo, ma un potente catalizzatore di evoluzione e consapevolezza.</p>
+                <img class="fotine" src="./index_media/index_pic_24.webp">
+        </div>
+        <div class="single-p-mix">
+            <div class="title-container">CONTATTI</div>
+            <div class="subtitle-container">ARIANNA BATTAGLIA</div>
+            <p>Instagram: @ari.battle<br>Email: arianna.btt@gmail.com</p>
+            <div class="subtitle-container">ANDREA BROLATTI</div>
+            <p>Instagram: @obliosoft<br>Email: brolattiandrea@gmail.com</p>
+            <div class="subtitle-container">AMBRA CELA</div>
+            <p>Instagram: @ambra_cela_<br>Email: ambracela17@gmail.com</p>
+            <div class="subtitle-container">ALICE CUPISTI</div>
+            <p>Instagram: @alicupisti<br>Email: cupistialice@gmail.com</p>
+            <div class="subtitle-container">ANNA DE NICOLO</div>
+            <p>Instagram: @aannaden<br>Email: anna.denicolo.26@gmail.com</p>
+            <div class="subtitle-container">MARCO TAINO</div>
+            <p>Instagram: @tainitostuff<br>Email: taino934@gmail.com</p>        
         </div>
     </div>
     <div class="col-3" id="info">
-        <h2>A creative house and digital delve dedicated to creating and producing visual narratives.<br>2024<br>social vari<br>Laboratorio di sintesi</h2>
+        <h2><b>Stop The Loop</b><br>by Syncro<br>2025©<br><br><br></h2>
+        <div id="icons">
+            <a><img class="icon" src="./icons/ig.png" data-link="https://www.instagram.com/syncro.ritmo/" style="cursor: pointer;"></a>
+            <a><img class="icon" src="./icons/tiktok.png" data-link="https://www.instagram.com/syncro.ritmo/" style="cursor: pointer;"></a>
+            <a><img class="icon" src="./icons/spotify.png" data-link="https://www.instagram.com/syncro.ritmo/" style="cursor: pointer;"></a>
+            <a href="mailto:syncro.ritmo@gmail.com"><img class="icon" src="./icons/mail.png" style="cursor: pointer;"></a>
+        </div>
     </div>
+    <div class="spacer" id="project-section"></div>
+    <div class="spacer" id="project-section"></div>
     <div class="col-12" id="footer">
         <div class="col-12">
-            <h3>Laboratorio di Sintesi Finale C2<br>
+            <h3>Stop The Loop - Syncro / Laboratorio di Sintesi Finale C2<br>
                 Corso di L. M. in Design della Comunicazione - Politecnico di Milano.<br>
                 Docenti: M. Ciancia, K. Goldoni, F. Piredda,  M. Ronchi.<br>
                 Tutor: S. Barozzi, G. Carbone, V. Dal Brun, S. Dall'Angelo.</h3>
@@ -160,7 +283,6 @@
         margin: 0;
         top: 1.2rem;
         margin-top: 1rem;
-
     }
 
     #nav-left{
@@ -168,6 +290,12 @@
     }
 
     #nav-right{
+        margin-right: 1.2rem;
+    }
+
+    #stoptheloop{
+        margin-top: 1.6rem;
+        width: 6vw;
         margin-right: 1.2rem;
     }
 
@@ -179,12 +307,79 @@
     }
 
     #welcome {
-        /*background-color: purple;*/
-        height: 100vh;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+    }
+
+    .tempistica{
+        font-family: sora, sans-serif;
+        font-weight: 400;
+        font-size: 1.2vw;
+        margin-top: 2.5vw;
+    }
+
+    #ritmotype-res{
+        text-align: center;
+        font-family: sora, sans-serif;
+        font-weight: 600;
+        line-height: 0.7;
+        margin-top: 3vw;
+        margin-bottom: 0;
+        font-size: 2vw;
+        color: white;
+    }
+
+    #ritmotype-res i{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+    }
+
+    .ritmotype-title{
+        font-family: sora, sans-serif;
+        font-weight: 600;
+        font-size: 10vw;
+        letter-spacing: -0.5vw;
+        margin-top: 3vw;
+        margin-bottom: 0;
+    }
+
+    .ritmotype-title i{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+
+    .singer{
+        color: #FF6CA8;
+    }
+
+    .producer{
+        color: #22B5FF;
+    }
+
+    .author{
+        color: #46D37F;
+    }
+
+    .deejay{
+        color: #FFA631;
+    }
+
+    #index_welcome{
+        width: 100vw;
+        margin-top: 10vw;
+    }
+
+    #index-stop{
+        width: 32vw;
+        margin-top: 12vw;
     }
 
     h2 {
-        font-size: 1.2rem;
+        font-size: 1.2vw;
         font-family: sora;
         font-weight: 400;
         color: white;
@@ -211,6 +406,24 @@
         cursor: pointer;
     }
 
+    #nave h2 i{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.1vw;
+        font-weight: 400;
+    }
+
+    #icons{
+        display: flex;
+        flex-direction: row;
+        gap: 0.4vw;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .icon{
+        width: 2.2vw;
+    }
+
     #info {
         /*background-color: red;*/
         position: sticky;
@@ -220,6 +433,7 @@
         flex-direction: column;
         justify-content: center;
         row-gap: 1.2rem;
+        line-height: 1.6vw;
     }
 
     #info h2{
@@ -235,11 +449,11 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        row-gap: 1rem;
+        row-gap: 5vw;
     }
 
     #content p{
-        font-size: 1.2rem;
+        font-size: 1.4vw;
         font-family: sora;
         font-weight: 400;
         color: white;
@@ -247,10 +461,134 @@
         top: 1rem;
     }
 
+    #content .fonti p{
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+    }
+
+    #content ul{
+        font-size: 1.4vw;
+        font-family: sora;
+        font-weight: 400;
+        color: white;
+        margin: 0;
+        top: 1rem;
+        padding-left: 1vw;
+    }
+
+    #content .single-p-mix{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        gap: 1vw;
+    }
+
+    .single-p-mix img{
+        width: 100%;
+    }
+
+    #content .single-p-mix .fotine{
+        margin-bottom: 1vw;
+    }
+
+    .fotine-title{
+        margin-top: 2vw;
+        text-align: center;
+        width: 100%;
+    }
+
+    #content .dual-p-mix{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .dual-p-mix div{
+        width: 24vw;
+    }
+
+    #dual-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        gap: 1vw;
+    }
+
+    #dual-right{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1vw;
+    }
+
+    .dual-p-mix img{
+        width: 70%;
+    }
+
+    .spotify-cont{
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    #stoplist{
+        background-color: #1D1D1D;
+        border-radius: 1vw;
+        padding: 1.5vw;
+    }
+
+    #stoplist-img{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
     .title-container{
         width: 100%;
-        height: 15vh;
-        background-color: green;
+        font-family: sora, sans-serif;
+        font-weight: 600;
+        font-size: 3vw;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .subtitle-container{
+        width: 100%;
+        font-family: sora, sans-serif;
+        font-weight: 600;
+        font-size: 2vw;
+        text-transform: uppercase;
+        color: white;
+        padding-top: 3vw;
+    }
+
+    .section-title{
+        font-family: sora, sans-serif;
+        font-weight: 600;
+        font-size: 6.5vw;
+        color: white;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+    }
+
+    .section-title i{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+        font-size: 4.5vw;
+    }
+    
+    #content #citazione{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 2.2vw;
+        line-height: 1.2;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
     }
 
     .spacer{
@@ -276,36 +614,72 @@
 
     .btn {
         border: 2px solid black;
-        background-color: black;
-        padding: 14px 28px;
+        background-color: white;
+        padding: 1vw 2vw;
         cursor: pointer;
         border-color: white;
-        border-radius: 2rem;
-        height: 4rem;
-        
-        font-size: 1rem;
+        border-radius: 6vw;
+        height: 4.4vw;
+
+        font-size: 1.4vw;
         font-family: sora;
-        font-weight: 400;
-        color: white;
+        font-weight: 600;
+        color: black;
     }
 
-    .dual{
-        width: 10rem;
+    .dual {
+        width: 12vw;
     }
 
     .btn:hover {
-        background: white;
-        color: black;
-
+        background: black;
+        color: white;
         transition: 50ms linear;
     }
 
-    .btn-container{
+    .btn-container {
         width: 100%;
-
         display: flex;
         justify-content: center;
-        gap: 1.2rem;
+        align-items: center;
+        position: relative; /* Posizionamento statico */
+        flex-shrink: 0; /* Mantieni la dimensione */
+        gap: 2vw;
+    }
+
+    .download-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap:3vw;
+    }
+
+    .download-title{
+        font-family: sora;
+        font-weight: 600;
+        text-align: center;
+        width: 100%;
+    }
+
+    .btn-down{
+        width: 20vw;
+        color: white;
+        background-color: #FF6CA8;
+        border-color: #FF6CA8;
+    }
+
+    .btn-down:hover {
+        background: black;
+        color: #FF6CA8;
+        transition: 50ms linear;
+    }
+
+    .btn-expl{
+        width: 20vw;
+        color: black;
+        background-color: white;
+        border-color: white;
     }
 
     #footer {
@@ -326,6 +700,179 @@
         text-align: center;
         opacity: 50%;
     }
+
+    @media (max-width: 600px){
+        body{
+            overflow-x: hidden;
+        }
+
+        #nave{
+            display: none;
+        }
+        
+        #info{
+            display: none;
+        }
+
+        .col-6{
+            width: 100%;
+        }
+
+        #stoptheloop {
+            margin-top: 1.4rem;
+            width: 18vw;
+            margin-right: 1.2rem;
+        }
+
+        #welcome{
+            padding: 5vw;
+        }
+
+        #ritmotype-res {
+            margin-top: 20vw;
+            margin-bottom: 0;
+            font-size: 12vw;
+        }
+
+        .ritmotype-title {
+            font-size: 12vw;
+            margin-top: 7vw;
+            margin-bottom: 0;
+        }
+
+        #ritmotype-img1{
+            width: 80%;
+        }
+
+        #stats {
+            display: flex;
+            font-family: sora, sans-serif;
+            font-weight: 600;
+            font-size: 12vw;
+            margin-bottom: 8vw;
+            width: 80vw;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4vw;
+            margin-top: 4vw;
+        }
+
+        .stat-cont {
+            width: 100%;
+            font-size: 6.4vw;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #content{
+            padding: 5vw;
+            row-gap: 10vw;
+        }
+
+        #content .title-container{
+            font-size: 6vw;
+        }
+
+        #content p{
+            font-size: 4.2vw;
+        }
+
+        #content .single-p-mix {
+            gap: 2vw;
+        }
+
+        #content .dual-p-mix {
+            flex-direction: column;
+        }
+
+        .dual-p-mix{
+            gap: 4vw;
+        }
+
+        .dual-p-mix div {
+            width: 100%;
+        }
+
+        #dual-left {
+            align-items: center;
+            gap: 2vw;
+        }
+
+        #dual-right {
+            align-items: center;
+            gap: 2vw;
+        }
+
+        #content ul {
+            font-size: 4.2vw;
+            padding-left: 4vw;
+        }
+
+        #stoplist {
+            border-radius: 3vw;
+            padding: 4vw;
+        }
+
+        #stoplist-img {
+            align-items: center;
+        }
+
+        .btn{
+            height: 14vw;
+            border-radius: 10vw;
+            font-size: 4.8vw;
+        }
+
+        .spoty{
+            width:60vw;
+        }
+
+        .spotify-cont {
+            display: flex;
+            flex-direction: column;
+            gap: 6vw;
+            margin-bottom: 2vw;
+        }
+
+        #stoplist-img img{
+            width: 100%;
+        }
+
+        .download-title{
+            font-size: 6vw;
+        }
+
+        .btn-container{
+            flex-direction: column;
+            gap: 6vw;
+        }
+
+        .btn-down{
+            width: 60vw;
+        }
+
+        .download-container{
+            gap: 4vw;
+        }
+
+        .btn-expl{
+            width: 60vw;
+        }
+
+        .spacer{
+            height: 2vh;
+        }
+
+        #footer h3 {
+            font-size: 4.2vw;
+        }
+
+        #footer{
+            padding: 5vw;
+        }
+    }
 </style>
 
 <script>
@@ -340,17 +887,38 @@
         }
     }
 
+    function openSpotify() {
+        window.open('https://open.spotify.com/intl-it/artist/2OwUh4IB8tJ5wdqoQV22Yr?si=jZCDnLoERxiMMpMSM580QA', '_blank');
+    }
+
+
     function openRitmario() {
-        window.open('ritmario.html', '_blank');
+        window.open('syncroritmo.github.io/stoptheloop/ritmario.html', '_blank');
+    }
+
+    function openHome() {
+        window.open('syncroritmo.github.io/stoptheloop/index.html', '_blank');
     }
 
     function openTest() {
-        window.open('test.html', '_blank');
+        window.open('syncroritmo.github.io/stoptheloop/ritmotest.html', '_blank');
     }
 
     function downloadReport() {
-        const newTab = window.open('report.pdf', '_blank'); // Apre il PDF in una nuova scheda
+        const newTab = window.open('./ritmotypes_download/StopTheLoop_Report.pdf', '_blank'); // Apre il PDF in una nuova scheda
         newTab.focus();
     }
+
+    function downloadSocial() {
+        const newTab = window.open('./ritmotypes_download/The Autotune.png', '_blank'); // Apre il PDF in una nuova scheda
+        newTab.focus();
+    }
+
+    document.querySelectorAll(".icon").forEach(image => {
+    image.addEventListener("click", () => {
+        const link = image.getAttribute("data-link"); // Leggi il link dal data-link
+        window.open(link, "_blank"); // Apri il link in una nuova scheda
+    });
+});
 </script>
 </html>
