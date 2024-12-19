@@ -3,12 +3,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Reverb</title>
-    <link rel="icon" type="image/x-icon" href="syncro favicon.png">
+    <link rel="icon" type="image/x-icon" href="./icons/syncro_favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sora:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="col-12" id="header">
         <h1 class="titolininav" id="nav-left" onclick="openHome()" style="cursor: pointer;">syncro</h1>
-        <img class="titolininav" id="stoptheloop" onclick="openTest()" src="test media/STOP THE LOOP.png" style="cursor: pointer;">
+        <img class="titolininav" id="stoptheloop" onclick="openTest()" src="./test_media/STOP THE LOOP.png" style="cursor: pointer;">
     </div>
     <div class="col-12" id="welcome">
         <h1 id="ritmotype-res">RITMO<br><i>type</i></h1>
@@ -27,10 +30,10 @@
                 <a>LENTO</a>
             </div>
         </div>
-        <img id="ritmotype-img1" src="ritmotypes_assets/thereverb_1.webp" alt="The VERSE">
+        <img id="ritmotype-img1" src="./ritmotypes_assets/thereverb_1.webp" alt="The VERSE">
     </div>
     <div class="col-3" id="nave">
-        <img src="ritmotypes_assets/thereverb_2.webp">
+        <img src="./ritmotypes_assets/thereverb_2.webp">
     </div>
     <div class="col-6" id="content">
         <div class="spacer" id="project-section"></div>
@@ -42,7 +45,7 @@
         <div class="single-p-mix">
             <div class="title-container singer">RUOLO: DEEJAY</div>
             <p>Vivono per connettersi e condividere. Proprio come sul dancefloor, mixano le emozioni e creano condivisione. Portano il loro spirito esplosivo nella socialità quotidiana.</p>
-            <img src="ritmotypes_assets/thereverb_3.webp">
+            <img src="./ritmotypes_assets/thereverb_3.webp">
         </div>
         <div class="single-p-mix">
             <div class="title-container singer">MOBILITà</div>
@@ -54,7 +57,7 @@
                 <p>Si eleva accanto a The Chorus, dove il suo senso di atmosfera amplifica l’intensità del Ritornello. Creando un’esperienza coinvolgente e indimenticabile.</p>
             </div>
             <div id="dual-right">
-                <img src="ritmotypes_assets/thereverb_4.webp">
+                <img src="./ritmotypes_assets/thereverb_4.webp">
             </div>
         </div>
         <div class="dual-p-mix">
@@ -84,7 +87,7 @@
                     <p>Ecco la StopList di The Reverb, la playlist che unisce la tua musica a questo RitmoType, creando momenti per ritrovare te stesso.</p>
                 </div>
                 <div id="stoplist-img">
-                    <img src="ritmotypes_assets/thereverb_5.png" alt="">
+                    <img src="./ritmotypes_assets/thereverb_5.png" alt="">
                 </div>
             </div>
             <div class="btn-container">
@@ -110,17 +113,17 @@
     <div class="col-3" id="info">
         <h2><b>Stop The Loop</b><br>by Syncro<br>2025©<br><br><br></h2>
         <div id="icons">
-            <a><img class="icon" src="icons/ig.png" data-link="https://www.instagram.com/syncro.ritmo/" style="cursor: pointer;"></a>
-            <a><img class="icon" src="icons/tiktok.png" data-link="https://www.instagram.com/syncro.ritmo/" style="cursor: pointer;"></a>
-            <a><img class="icon" src="icons/spotify.png" data-link="https://www.instagram.com/syncro.ritmo/" style="cursor: pointer;"></a>
-            <a href="mailto:syncro.ritmo@gmail.com"><img class="icon" src="icons/mail.png" style="cursor: pointer;"></a>
+            <a><img class="icon" src="./icons/ig.png" data-link="https://www.instagram.com/syncro.ritmo/" style="cursor: pointer;"></a>
+            <a><img class="icon" src="./icons/tiktok.png" data-link="https://www.tiktok.com/@syncro.ritmo?_t=ZN-8sKEjG1gm1O&_r=1" style="cursor: pointer;"></a>
+            <a><img class="icon" src="./icons/spotify.png" data-link="https://open.spotify.com/user/i9r9kop7b1pa1q5tldv3rwjyb?si=5U0nTxBlTJ2mIUD2f1QV9Q" style="cursor: pointer;"></a>
+            <a href="mailto:syncro.ritmo@gmail.com"><img class="icon" src="./icons/mail.png" style="cursor: pointer;"></a>
         </div>
     </div>
     <div class="spacer" id="project-section"></div>
     <div class="spacer" id="project-section"></div>
     <div class="col-12" id="footer">
         <div class="col-12">
-            <h3>Laboratorio di Sintesi Finale C2<br>
+            <h3>Stop The Loop - Syncro / Laboratorio di Sintesi Finale C2<br>
                 Corso di L. M. in Design della Comunicazione - Politecnico di Milano.<br>
                 Docenti: M. Ciancia, K. Goldoni, F. Piredda,  M. Ronchi.<br>
                 Tutor: S. Barozzi, G. Carbone, V. Dal Brun, S. Dall'Angelo.</h3>
@@ -522,6 +525,179 @@
         text-align: center;
         opacity: 50%;
     }
+
+    @media (max-width: 600px){
+        body{
+            overflow-x: hidden;
+        }
+
+        #nave{
+            display: none;
+        }
+        
+        #info{
+            display: none;
+        }
+
+        .col-6{
+            width: 100%;
+        }
+
+        #stoptheloop {
+            margin-top: 1.4rem;
+            width: 18vw;
+            margin-right: 1.2rem;
+        }
+
+        #welcome{
+            padding: 5vw;
+        }
+
+        #ritmotype-res {
+            margin-top: 20vw;
+            margin-bottom: 0;
+            font-size: 12vw;
+        }
+
+        .ritmotype-title {
+            font-size: 12vw;
+            margin-top: 7vw;
+            margin-bottom: 0;
+        }
+
+        #ritmotype-img1{
+            width: 80%;
+        }
+
+        #stats {
+            display: flex;
+            font-family: sora, sans-serif;
+            font-weight: 600;
+            font-size: 12vw;
+            margin-bottom: 8vw;
+            width: 80vw;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4vw;
+            margin-top: 4vw;
+        }
+
+        .stat-cont {
+            width: 100%;
+            font-size: 6.4vw;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #content{
+            padding: 5vw;
+            row-gap: 10vw;
+        }
+
+        #content .title-container{
+            font-size: 6vw;
+        }
+
+        #content p{
+            font-size: 4.2vw;
+        }
+
+        #content .single-p-mix {
+            gap: 2vw;
+        }
+
+        #content .dual-p-mix {
+            flex-direction: column;
+        }
+
+        .dual-p-mix{
+            gap: 4vw;
+        }
+
+        .dual-p-mix div {
+            width: 100%;
+        }
+
+        #dual-left {
+            align-items: center;
+            gap: 2vw;
+        }
+
+        #dual-right {
+            align-items: center;
+            gap: 2vw;
+        }
+
+        #content ul {
+            font-size: 4.2vw;
+            padding-left: 4vw;
+        }
+
+        #stoplist {
+            border-radius: 3vw;
+            padding: 4vw;
+        }
+
+        #stoplist-img {
+            align-items: center;
+        }
+
+        .btn{
+            height: 14vw;
+            border-radius: 10vw;
+            font-size: 4.8vw;
+        }
+
+        .spoty{
+            width:60vw;
+        }
+
+        .spotify-cont {
+            display: flex;
+            flex-direction: column;
+            gap: 6vw;
+            margin-bottom: 2vw;
+        }
+
+        #stoplist-img img{
+            width: 100%;
+        }
+
+        .download-title{
+            font-size: 6vw;
+        }
+
+        .btn-container{
+            flex-direction: column;
+            gap: 6vw;
+        }
+
+        .btn-down{
+            width: 60vw;
+        }
+
+        .download-container{
+            gap: 4vw;
+        }
+
+        .btn-expl{
+            width: 60vw;
+        }
+
+        .spacer{
+            height: 2vh;
+        }
+
+        #footer h3 {
+            font-size: 4.2vw;
+        }
+
+        #footer{
+            padding: 5vw;
+        }
+    }
 </style>
 
 <script>
@@ -537,29 +713,29 @@
     }
 
     function openSpotify() {
-        window.open('https://open.spotify.com/intl-it/artist/2OwUh4IB8tJ5wdqoQV22Yr?si=jZCDnLoERxiMMpMSM580QA', '_blank');
+        window.open('https://open.spotify.com/playlist/3VdEMAEaRmWdt4n22WOWpI?si=1d0514ce012a4796', '_blank');
     }
 
 
     function openRitmario() {
-        window.open('ritmario.html', '_blank');
+        window.open('https://syncroritmo.github.io/stoptheloop/ritmario.html', '_blank');
     }
 
     function openHome() {
-        window.open('landing.html', '_blank');
+        window.open('https://syncroritmo.github.io/stoptheloop/index.html', '_blank');
     }
 
     function openTest() {
-        window.open('ritmotest.html', '_blank');
+        window.open('https://syncroritmo.github.io/stoptheloop/ritmotest.html', '_blank');
     }
 
     function downloadPdf() {
-        const newTab = window.open('ritmotypes_download/The Reverb.pdf', '_blank'); // Apre il PDF in una nuova scheda
+        const newTab = window.open('./ritmotypes_download/The Reverb.pdf', '_blank'); // Apre il PDF in una nuova scheda
         newTab.focus();
     }
 
     function downloadSocial() {
-        const newTab = window.open('ritmotypes_download/The Reverb.png', '_blank'); // Apre il PDF in una nuova scheda
+        const newTab = window.open('./ritmotypes_download/The Reverb.png', '_blank'); // Apre il PDF in una nuova scheda
         newTab.focus();
     }
 
