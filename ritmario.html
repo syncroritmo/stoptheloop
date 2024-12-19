@@ -1,122 +1,277 @@
 <html>
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RitmoType</title>
+    <link rel="icon" type="image/x-icon" href="./icons/syncro_favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sora:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="col-12" id="header">
-        <h1 class="titolininav" id="nav-left">SYNCRO</h1>
-        <h1 class="titolininav" id="nav-right">FAI IL TEST</h1>
+        <h1 class="titolininav" id="nav-left" onclick="openHome()" style="cursor: pointer;">syncro</h1>
+        <img class="titolininav" id="stoptheloop" onclick="openTest()" src="./test_media/STOP THE LOOP.png" style="cursor: pointer;">
     </div>
     <div class="col-12" id="welcome">
+        <img id="index-stop" src="./index_media/TYPE_STOP_THE_LOOP.webp">
+        <img id="index_welcome" src="./ritmario_media/RITmOPIC_01.webp">
     </div>
     <div class="col-3" id="nave">
-        <h2 data-target="independence-section" onclick="scrollToSection(event)">01. Independence</h2>
-        <h2 data-target="experience-section" onclick="scrollToSection(event)">02. Experience</h2>
-        <h2 data-target="efficiency-section" onclick="scrollToSection(event)">03. Efficiency</h2>
-        <h2 data-target="sharing-section" onclick="scrollToSection(event)">04. Sharing</h2>
+        <h2 data-target="intro-section" onclick="scrollToSection(event)"><i>00.</i> Intro</h2>
+        <h2 data-target="singer-section" onclick="scrollToSection(event)"><i>01.</i> Singer</h2>
+        <h2 data-target="author-section" onclick="scrollToSection(event)"><i>02.</i> Author</h2>
+        <h2 data-target="producer-section" onclick="scrollToSection(event)"><i>03.</i> Producer</h2>
+        <h2 data-target="deejay-section" onclick="scrollToSection(event)"><i>04.</i> Deejay</h2>
+        <h2 data-target="stoplist-section" onclick="scrollToSection(event)"><i>05.</i> StopList</h2>
     </div>
     <div class="col-6" id="content">
-        <div class="spacer" id="independence-section"></div>
-        <div class="title-container"></div>
-        <p>After the story was finished, we quickly started brainstorming and gathering references 
-            for what the design of the characters could be. We landed on a mix between an astronaut 
-            and a diver. We really loved the analog quality and the sense of oppression of old diving 
-            suits and the cleaner shapes and bright colors from the astronauts suits. The orange color 
-            for the suits was chosen primarily to contrast the gray background. In addition, the orange also 
-            refers to the overalls that prisoners often wear, mainly in the USA.</p>
-        <p>After the story was finished, we quickly started brainstorming and gathering references 
-            for what the design of the characters could be. We landed on a mix between an astronaut 
-            and a diver. We really loved the analog quality and the sense of oppression of old diving 
-            suits and the cleaner shapes and bright colors from the astronauts suits. The orange color 
-            for the suits was chosen primarily to contrast the gray background. In addition, the orange also 
-            refers to the overalls that prisoners often wear, mainly in the USA.</p>
-        <div class="img-container">
-            <img class="img-small" src="pasta_lover.jpeg">
+        <div class="spacer"></div>
+        <div class="single-p-mix">
+            <div class="section-title bianco"  id="intro-section"><a><i>00.</i> INTRO</a></div>
+            <p>Come nella musica, anche nella mobilità ognuno vive seguendo un ritmo unico, una melodia che riflette il proprio approccio alla vita. 
+                I Ritmotype sono stati progettati per esplorare il tuo ritmo che guida il tuo approccio alla mobilità e alla tua vita quotidiana.
+                I Ritmotype si dividono in quattro categorie principali, i Ruoli, definiti ciascuno dalla propria "vibe" distintiva, ossia l’approccio. 
+                Ogni ruolo si declina in 4 varianti specifiche, definite in base alla combinazione di frequenza e andamento.</p>
+            <img src="./ritmario_media/RITmOPIC_02.webp">
+            <p>La frequenza indica il modo in cui affronti le tue giornate, che può essere lento o veloce, mentre l’andamento rappresenta il tuo rapporto 
+                con la routine, che può essere regolare o irregolare. Tutte le 16 personalità sono i Ritmotype.
+                Come nella musica, conoscere il proprio ritmo e quelli altrui è il primo passo per vivere al meglio. 
+                Esplorali tutti oppure fai il test, scopri il tuo Ritmotype e trova il tuo ritmo nella sinfonia della mobilità!</p>
         </div>
-        <p>After the story was finished, we quickly started brainstorming and gathering references 
-            for what the design of the characters could be. We landed on a mix between an astronaut 
-            and a diver. We really loved the analog quality and the sense of oppression of old diving 
-            suits and the cleaner shapes and bright colors from the astronauts suits. The orange color 
-            for the suits was chosen primarily to contrast the gray background. In addition, the orange also 
-            refers to the overalls that prisoners often wear, mainly in the USA.</p>
-        <img src="tendono a cadere.jpeg">
-        <p>After the story was finished, we quickly started brainstorming and gathering references 
-            for what the design of the characters could be. We landed on a mix between an astronaut 
-            and a diver. We really loved the analog quality and the sense of oppression of old diving 
-            suits and the cleaner shapes and bright colors from the astronauts suits.<br>
-            The orange color for the suits was chosen primarily to contrast the gray background.In addition, the orange 
-            also refers to the overalls that prisoners often wear, mainly in the USA. The orange color 
-            for the suits was chosen primarily to contrast the gray background.<br>In addition, the orange 
-            also refers to the overalls that prisoners often wear, mainly in the USA. 
-            The orange color for the suits was chosen primarily to contrast the background.</p>
-        <p>After the story was finished, we quickly started brainstorming and gathering references 
-            for what the design of the characters could be. We landed on a mix between an astronaut 
-            and a diver. We really loved the analog quality and the sense of oppression of old diving 
-            suits and the cleaner shapes and bright colors from the astronauts suits. The orange color 
-            for the suits was chosen primarily to contrast the gray background. In addition, the orange also 
-            refers to the overalls that prisoners often wear, mainly in the USA.</p>
-        <p>After the story was finished, we quickly started brainstorming and gathering references 
-            for what the design of the characters could be. We landed on a mix between an astronaut 
-            and a diver. We really loved the analog quality and the sense of oppression of old diving 
-            suits and the cleaner shapes and bright colors from the astronauts suits. The orange color 
-            for the suits was chosen primarily to contrast the gray background. In addition, the orange also 
-            refers to the overalls that prisoners often wear, mainly in the USA.</p>
-        <div class="spacer" id="experience-section"></div>
-        <div class="title-container"></div>
-        <p>After the story was finished, we quickly started brainstorming and gathering references 
-            for what the design of the characters could be. We landed on a mix between an astronaut 
-            and a diver. We really loved the analog quality and the sense of oppression of old diving 
-            suits and the cleaner shapes and bright colors from the astronauts suits. The orange color 
-            for the suits was chosen primarily to contrast the gray background. In addition, the orange also 
-            refers to the overalls that prisoners often wear, mainly in the USA.</p>
-        <div class="img-container">
-            <img class="img-small" src="pasta_lover.jpeg">
+        <div class="single-p-mix">
+            <div class="singer section-title"  id="singer-section"><a><i>01.</i> SINGER</a></div>
+            <p>Come i cantanti interpretano una canzone a modo loro, anche i Singer affrontano il mondo con unicità e autonomia. Il loro ritmo riflette 
+                un'espressione personale che rende ogni loro esperienza su misura.</p>
+            <div class="dual-p-mix">
+                <div id="dual-left">
+                    <img class="ritmo-img" src="./ritmario_media/RITmOPIC_03.webp">
+                </div>
+                <div id="dual-right" class="desc">
+                    <p>Come il flow (il flusso) in una traccia musicale segue il ritmo naturale, è unico, spontaneo e stabile.<br><br>
+                        <i>Vibe</i><br><b class="singer">INDIPENDENZA</b><br><br>
+                        <i>Frequenza</i><br><b class="singer">REGOLARE</b><br><br>
+                        <i>Andamento</i><br><b class="singer">LENTO</b><br><br>
+                    </p>
+                </div>
+            </div>
+            <div class="dual-p-mix">
+                <div id="dual-left">
+                    <p>Come l'ad-lib, (l’improvvisazione) arricchisce una canzone, è spontaneo e creativo.<br><br>
+                        <i>Vibe</i><br><b class="singer">INDIPENDENZA</b><br><br>
+                        <i>Frequenza</i><br><b class="singer">IRREGOLARE</b><br><br>
+                        <i>Andamento</i><br><b class="singer">LENTO</b><br><br></p>
+                </div>
+                <div id="dual-right">
+                    <img class="ritmo-img" src="./ritmario_media/RITmOPIC_04.webp">
+                </div>
+            </div>
+            <div class="dual-p-mix">
+                <div id="dual-left">
+                    <img class="ritmo-img" src="./ritmario_media/RITmOPIC_05.webp">
+                </div>
+                <div id="dual-right">
+                    <p>Come l’autotune calibra e perfeziona ogni nota, è rapido e costante e preciso.<br><br>
+                        <i>Vibe</i><br><b class="singer">INDIPENDENZA</b><br><br>
+                        <i>Frequenza</i><br><b class="singer">REGOLARE</b><br><br>
+                        <i>Andamento</i><br><b class="singer">VELOCE</b><br><br></p>
+                </div>
+            </div>
+            <div class="dual-p-mix">
+                <div id="dual-left">
+                    <p>Come un solo (l’assolo) virtuoso, è imprevedibile, libero e pieno di energia creativa.<br><br>
+                        <i>Vibe</i><br><b class="singer">INDIPENDENZA</b><br><br>
+                        <i>Frequenza</i><br><b class="singer">IRREGOLARE</b><br><br>
+                        <i>Andamento</i><br><b class="singer">VELOCE</b><br><br></p></p>
+                </div>
+                <div id="dual-right">
+                    <img class="ritmo-img" src="./ritmario_media/RITmOPIC_06.webp">
+                </div>
+            </div>
         </div>
-        <div class="btn-container">
-            <button class="btn dual">Ritmario</button>
-            <button class="btn dual">Vai al test</button>
+        <div class="single-p-mix">
+            <div class="author section-title"  id="author-section"><a><i>02.</i> AUTHOR</a></div>
+            <p>Gli Authors trasformano ciò che vivono in emozioni, come autori musicali che traducono narrazioni in musica. 
+                Ogni loro sensazione è un tassello che arricchisce il mosaico della loro vita.</p>
+            <div class="dual-p-mix">
+                <div id="dual-left">
+                    <img class="ritmo-img" src="./ritmario_media/RITmOPIC_07.webp">
+                </div>
+                <div id="dual-right" class="desc">
+                    <p>Come una strofa ben scritta, approfondisce ogni passo con regolarità e attenzione ai dettagli.<br><br>
+                        <i>Vibe</i><br><b class="author">INDIPENDENZA</b><br><br>
+                        <i>Frequenza</i><br><b class="author">REGOLARE</b><br><br>
+                        <i>Andamento</i><br><b class="author">LENTO</b><br><br>
+                    </p>
+                </div>
+            </div>
+            <div class="dual-p-mix">
+                <div id="dual-left">
+                    <p>Come un bridge musicale collega le sezioni di una canzone, unisce esperienze e idee in modo perfetto.<br><br>
+                        <i>Vibe</i><br><b class="author">INDIPENDENZA</b><br><br>
+                        <i>Frequenza</i><br><b class="author">IRREGOLARE</b><br><br>
+                        <i>Andamento</i><br><b class="author">LENTO</b><br><br></p>
+                </div>
+                <div id="dual-right">
+                    <img class="ritmo-img" src="./ritmario_media/RITmOPIC_08.webp">
+                </div>
+            </div>
+            <div class="dual-p-mix">
+                <div id="dual-left">
+                    <img class="ritmo-img" src="./ritmario_media/RITmOPIC_09.webp">
+                </div>
+                <div id="dual-right">
+                    <p>Come un ritornello, è dinamico e si muove con energia costante, creando un ritmo coinvolgente.<br><br>
+                        <i>Vibe</i><br><b class="author">INDIPENDENZA</b><br><br>
+                        <i>Frequenza</i><br><b class="author">REGOLARE</b><br><br>
+                        <i>Andamento</i><br><b class="author">VELOCE</b><br><br></p>
+                </div>
+            </div>
+            <div class="dual-p-mix">
+                <div id="dual-left">
+                    <p>Come una topline (melodia) che si imprime nella mente, segue l’istinto con unicità e flessibilità.<br><br>
+                        <i>Vibe</i><br><b class="author">INDIPENDENZA</b><br><br>
+                        <i>Frequenza</i><br><b class="author">IRREGOLARE</b><br><br>
+                        <i>Andamento</i><br><b class="author">VELOCE</b><br><br></p></p>
+                </div>
+                <div id="dual-right">
+                    <img class="ritmo-img" src="./ritmario_media/RITmOPIC_10.webp">
+                </div>
+            </div>
         </div>
-        <div class="spacer" id="efficiency-section"></div>
-        <div class="title-container"></div>
-        <p>After the story was finished, we quickly started brainstorming and gathering references 
-            for what the design of the characters could be. We landed on a mix between an astronaut 
-            and a diver. We really loved the analog quality and the sense of oppression of old diving 
-            suits and the cleaner shapes and bright colors from the astronauts suits. The orange color 
-            for the suits was chosen primarily to contrast the gray background. In addition, the orange also 
-            refers to the overalls that prisoners often wear, mainly in the USA.</p>
-        <div class="img-container">
-            <img class="img-small" src="pasta_lover.jpeg">
+        <div class="single-p-mix">
+            <div class="producer section-title"  id="producer-section"><a><i>03.</i> PRODUCER</a></div>
+            <p>Maestri dell’organizzazione, come i produttori musicali, i Producers sono tecnici e precisi: analizzano, settano e ottimizzano, trovando sempre il modo efficiente per muoversi nel mondo.</p>
+            <div class="dual-p-mix">
+                <div id="dual-left">
+                    <img class="ritmo-img" src="./ritmario_media/RITmOPIC_11.webp">
+                </div>
+                <div id="dual-right" class="desc">
+                    <p>Come la key (tonalità) che definisce il mood di una canzone, porta equilibrio in tutto ciò che fa.<br><br>
+                        <i>Vibe</i><br><b class="producer">INDIPENDENZA</b><br><br>
+                        <i>Frequenza</i><br><b class="producer">REGOLARE</b><br><br>
+                        <i>Andamento</i><br><b class="producer">LENTO</b><br><br>
+                    </p>
+                </div>
+            </div>
+            <div class="dual-p-mix">
+                <div id="dual-left">
+                    <p>Come la pausa nella musica, arricchisce ogni esperienza e porta momenti di riflessione.<br><br>
+                        <i>Vibe</i><br><b class="producer">INDIPENDENZA</b><br><br>
+                        <i>Frequenza</i><br><b class="producer">IRREGOLARE</b><br><br>
+                        <i>Andamento</i><br><b class="producer">LENTO</b><br><br></p>
+                </div>
+                <div id="dual-right">
+                    <img class="ritmo-img" src="./ritmario_media/RITmOPIC_12.webp">
+                </div>
+            </div>
+            <div class="dual-p-mix">
+                <div id="dual-left">
+                    <img class="ritmo-img" src="./ritmario_media/RITmOPIC_13.webp">
+                </div>
+                <div id="dual-right">
+                    <p>Come un equalizzatore che bilancia le frequenze di una traccia, è in grado di ottimizzare ogni situazione.<br><br>
+                        <i>Vibe</i><br><b class="producer">INDIPENDENZA</b><br><br>
+                        <i>Frequenza</i><br><b class="producer">REGOLARE</b><br><br>
+                        <i>Andamento</i><br><b class="producer">VELOCE</b><br><br></p>
+                </div>
+            </div>
+            <div class="dual-p-mix">
+                <div id="dual-left">
+                    <p>Come la base (beat) di una traccia, sei il ritmo costante che dà energia e direzione a ogni azione.<br><br>
+                        <i>Vibe</i><br><b class="producer">INDIPENDENZA</b><br><br>
+                        <i>Frequenza</i><br><b class="producer">IRREGOLARE</b><br><br>
+                        <i>Andamento</i><br><b class="producer">VELOCE</b><br><br></p></p>
+                </div>
+                <div id="dual-right">
+                    <img class="ritmo-img" src="./ritmario_media/RITmOPIC_14.webp">
+                </div>
+            </div>
         </div>
-        <div class="btn-container">
-            <button class="btn">Scarica il report</button>
+        <div class="single-p-mix">
+            <div class="deejay section-title"  id="deejay-section"><a><i>04.</i> DEEJAY</a></div>
+            <p>I Deejays vivono per connettersi e condividere. Proprio come sul dancefloor, mixano emozioni e creano momenti di 
+                condivisione, portando il loro spirito esplosivo nella socialità quotidiana.</p>
+            <div class="dual-p-mix">
+                <div id="dual-left">
+                    <img class="ritmo-img" src="./ritmario_media/RITmOPIC_15.webp">
+                </div>
+                <div id="dual-right" class="desc">
+                    <p>Come il fade che sfuma gradualmente il volume una traccia, porta armonia e calma.<br><br>
+                        <i>Vibe</i><br><b class="deejay">INDIPENDENZA</b><br><br>
+                        <i>Frequenza</i><br><b class="deejay">REGOLARE</b><br><br>
+                        <i>Andamento</i><br><b class="deejay">LENTO</b><br><br>
+                    </p>
+                </div>
+            </div>
+            <div class="dual-p-mix">
+                <div id="dual-left">
+                    <p>Come il riverbero che amplifica e arricchisce un suono, crea l’atmosfera in ogni situazione.<br><br>
+                        <i>Vibe</i><br><b class="deejay">INDIPENDENZA</b><br><br>
+                        <i>Frequenza</i><br><b class="deejay">IRREGOLARE</b><br><br>
+                        <i>Andamento</i><br><b class="deejay">LENTO</b><br><br></p>
+                </div>
+                <div id="dual-right">
+                    <img class="ritmo-img" src="./ritmario_media/RITmOPIC_16.webp">
+                </div>
+            </div>
+            <div class="dual-p-mix">
+                <div id="dual-left">
+                    <img class="ritmo-img" src="./ritmario_media/RITmOPIC_17.webp">
+                </div>
+                <div id="dual-right">
+                    <p>Come la sincronizzazione che allinea suoni, è capace di unire persone e idee in un’armonia bilanciata.<br><br>
+                        <i>Vibe</i><br><b class="deejay">INDIPENDENZA</b><br><br>
+                        <i>Frequenza</i><br><b class="deejay">REGOLARE</b><br><br>
+                        <i>Andamento</i><br><b class="deejay">VELOCE</b><br><br></p>
+                </div>
+            </div>
+            <div class="dual-p-mix">
+                <div id="dual-left">
+                    <p>Come il drop in una canzone, è l’energia che scuote ogni ambiente e cattura l’attenzione.<br><br>
+                        <i>Vibe</i><br><b class="deejay">INDIPENDENZA</b><br><br>
+                        <i>Frequenza</i><br><b class="deejay">IRREGOLARE</b><br><br>
+                        <i>Andamento</i><br><b class="deejay">VELOCE</b><br><br></p></p>
+                </div>
+                <div id="dual-right">
+                    <img class="ritmo-img" src="./ritmario_media/RITmOPIC_18.webp">
+                </div>
+            </div>
         </div>
-        <div class="spacer" id="sharing-section"></div>
-        <div class="title-container"></div>
-        <p>After the story was finished, we quickly started brainstorming and gathering references 
-            for what the design of the characters could be. We landed on a mix between an astronaut 
-            and a diver. We really loved the analog quality and the sense of oppression of old diving 
-            suits and the cleaner shapes and bright colors from the astronauts suits. The orange color 
-            for the suits was chosen primarily to contrast the gray background. In addition, the orange also 
-            refers to the overalls that prisoners often wear, mainly in the USA.</p>
-        <p>After the story was finished, we quickly started brainstorming and gathering references 
-            for what the design of the characters could be. We landed on a mix between an astronaut 
-            and a diver. We really loved the analog quality and the sense of oppression of old diving 
-            suits and the cleaner shapes and bright colors from the astronauts suits. The orange color 
-            for the suits was chosen primarily to contrast the gray background. In addition, the orange also 
-            refers to the overalls that prisoners often wear, mainly in the USA.</p>
-        <div class="img-container">
-            <img class="img-small" src="pasta_lover.jpeg">
+        <div class="single-p-mix">
+            <div class="bianco section-title"  id="stoplist-section"><a><i>05.</i> STOPLIST</a></div>
+            <p>Un elemento distintivo del progetto Stop The Loop sono le Stoplist, playlist create per ogni RitmoType è progettate per far riflettere e 
+                sicnornizzarsi con se stesso, sulla base delle proprie preferenze musicali individuali.<br><br>Le playlist hanno la caratteristica di contenere, 
+                tra la selezione di brani, delle interruzioni, denominate Stop The Loop, ossia spazi sonori realizzati in collaborazione con Headspace e 
+                narrati dal team Syncro.
+            </p>
+            <img class="fotine" src="./index_media/index_pic_21.webp">
+            <p>Questi interventi non solo incoraggiano un ascolto attento di sé, ma fungono anche da momenti di riflessione per verificare se il risultato del 
+                test rappresenta effettivamente il ritmo più adatto alle proprie esigenze. Studiate per favorire un processo di interiorizzazione del proprio 
+                RitmoType, gli Stop The Loop offrono inoltre l’opportunità di esplorare potenziali alternative di ritmo.
+            </p>
+            <img class="fotine" src="./ritmario_media/RITmOPIC_19.webp">
+            <div class="download-container">
+                <div class="btn-container">
+                    <button class="btn spoty" onclick="openSpotify()">Ascolta su Spotify</button>
+                </div>
+            </div>
         </div>
     </div>
     <div class="col-3" id="info">
-        <h2>Cos'è il Ritmario?<br><br>Ritmario è un portale dedicato all'esplorazione dei ritmi di vita delle persone. 
-            Attraverso un'analisi dei principali archetipi, offre uno strumento di riflessione per comprendere le 
-            diverse modalità con cui affrontiamo il tempo e le scelte quotidiane. Un invito alla consapevolezza e 
-            all'ascolto del proprio ritmo, per una maggiore armonia personale e collettiva.</h2>
+        <h2><b>Stop The Loop</b><br>by Syncro<br>2025©<br><br><br></h2>
+        <div id="icons">
+            <a><img class="icon" src="./icons/ig.png" data-link="https://www.instagram.com/syncro.ritmo/" style="cursor: pointer;"></a>
+            <a><img class="icon" src="./icons/tiktok.png" data-link="https://www.tiktok.com/@syncro.ritmo?_t=ZN-8sKEjG1gm1O&_r=1" style="cursor: pointer;"></a>
+            <a><img class="icon" src="./icons/spotify.png" data-link="https://open.spotify.com/user/i9r9kop7b1pa1q5tldv3rwjyb?si=5U0nTxBlTJ2mIUD2f1QV9Q" style="cursor: pointer;"></a>
+            <a href="mailto:syncro.ritmo@gmail.com"><img class="icon" src="./icons/mail.png" style="cursor: pointer;"></a>
+        </div>
     </div>
+    <div class="spacer" id="project-section"></div>
+    <div class="spacer" id="project-section"></div>
     <div class="col-12" id="footer">
         <div class="col-12">
-            <h3>Laboratorio di Sintesi Finale C2<br>
+            <h3>Stop The Loop - Syncro / Laboratorio di Sintesi Finale C2<br>
                 Corso di L. M. in Design della Comunicazione - Politecnico di Milano.<br>
                 Docenti: M. Ciancia, K. Goldoni, F. Piredda,  M. Ronchi.<br>
                 Tutor: S. Barozzi, G. Carbone, V. Dal Brun, S. Dall'Angelo.</h3>
@@ -156,7 +311,6 @@
         margin: 0;
         top: 1.2rem;
         margin-top: 1rem;
-
     }
 
     #nav-left{
@@ -164,6 +318,12 @@
     }
 
     #nav-right{
+        margin-right: 1.2rem;
+    }
+
+    #stoptheloop{
+        margin-top: 1.6rem;
+        width: 6vw;
         margin-right: 1.2rem;
     }
 
@@ -175,12 +335,83 @@
     }
 
     #welcome {
-        /*background-color: purple;*/
+        display: flex;
+        flex-direction: column;
+        color: white;
+        align-items: center;
+        justify-content: center;
         height: 100vh;
     }
 
+    .tempistica{
+        font-family: sora, sans-serif;
+        font-weight: 400;
+        font-size: 1.2vw;
+        margin-top: 2.5vw;
+    }
+
+    #ritmotype-res{
+        text-align: center;
+        font-family: sora, sans-serif;
+        font-weight: 600;
+        line-height: 0.7;
+        margin-top: 3vw;
+        margin-bottom: 0;
+        font-size: 2vw;
+        color: white;
+    }
+
+    #ritmotype-res i{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+    }
+
+    .ritmotype-title{
+        font-family: sora, sans-serif;
+        font-weight: 600;
+        font-size: 10vw;
+        letter-spacing: -0.5vw;
+        margin-top: 3vw;
+        margin-bottom: 0;
+    }
+
+    .ritmotype-title i{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+
+    .bianco{
+        color: white;;
+    }
+
+    .singer{
+        color: #FF6CA8;
+    }
+
+    .producer{
+        color: #22B5FF;
+    }
+
+    .author{
+        color: #46D37F;
+    }
+
+    .deejay{
+        color: #FFA631;
+    }
+
+    #index_welcome{
+        width: 100vw;
+        position: absolute;
+    }
+
+    #index-stop{
+        width: 32vw;
+    }
+
     h2 {
-        font-size: 1.2rem;
+        font-size: 1.2vw;
         font-family: sora;
         font-weight: 400;
         color: white;
@@ -207,6 +438,24 @@
         cursor: pointer;
     }
 
+    #nave h2 i{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.1vw;
+        font-weight: 400;
+    }
+
+    #icons{
+        display: flex;
+        flex-direction: row;
+        gap: 0.4vw;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .icon{
+        width: 2.2vw;
+    }
+
     #info {
         /*background-color: red;*/
         position: sticky;
@@ -216,6 +465,7 @@
         flex-direction: column;
         justify-content: center;
         row-gap: 1.2rem;
+        line-height: 1.6vw;
     }
 
     #info h2{
@@ -231,11 +481,11 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        row-gap: 1rem;
+        row-gap: 5vw;
     }
 
     #content p{
-        font-size: 1.2rem;
+        font-size: 1.4vw;
         font-family: sora;
         font-weight: 400;
         color: white;
@@ -243,10 +493,143 @@
         top: 1rem;
     }
 
+    #content .fonti p{
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+    }
+
+    #content ul{
+        font-size: 1.4vw;
+        font-family: sora;
+        font-weight: 400;
+        color: white;
+        margin: 0;
+        top: 1rem;
+        padding-left: 1vw;
+    }
+
+    #content .single-p-mix{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        gap: 1vw;
+    }
+
+    .single-p-mix img{
+        width: 100%;
+    }
+
+    #content .single-p-mix .fotine{
+        margin-bottom: 1vw;
+    }
+
+    .fotine-title{
+        margin-top: 2vw;
+        text-align: center;
+        width: 100%;
+    }
+
+    #content .dual-p-mix{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .dual-p-mix div{
+        width: 24vw;
+    }
+
+    #dual-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        gap: 1vw;
+        margin-top: 2vw;
+    }
+
+    #dual-right{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1vw;
+        margin-top: 2vw;
+    }
+
+    .desc{
+        width: 65%;
+    }
+
+    .dual-p-mix img{
+        width: auto;
+    }
+
+    .ritmo-img{
+        height: 30vh;
+    }
+
+    .spotify-cont{
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    #stoplist{
+        background-color: #1D1D1D;
+        border-radius: 1vw;
+        padding: 1.5vw;
+    }
+
+    #stoplist-img{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
     .title-container{
         width: 100%;
-        height: 15vh;
-        background-color: green;
+        font-family: sora, sans-serif;
+        font-weight: 600;
+        font-size: 3vw;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .subtitle-container{
+        width: 100%;
+        font-family: sora, sans-serif;
+        font-weight: 600;
+        font-size: 2vw;
+        text-transform: uppercase;
+        color: white;
+        padding-top: 3vw;
+    }
+
+    .section-title{
+        font-family: sora, sans-serif;
+        font-weight: 600;
+        font-size: 6.5vw;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+    }
+
+    .section-title i{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+        font-size: 4.5vw;
+    }
+    
+    #content #citazione{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 2.2vw;
+        line-height: 1.2;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
     }
 
     .spacer{
@@ -272,36 +655,72 @@
 
     .btn {
         border: 2px solid black;
-        background-color: black;
-        padding: 14px 28px;
+        background-color: white;
+        padding: 1vw 2vw;
         cursor: pointer;
         border-color: white;
-        border-radius: 2rem;
-        height: 4rem;
-        
-        font-size: 1rem;
+        border-radius: 6vw;
+        height: 4.4vw;
+
+        font-size: 1.4vw;
         font-family: sora;
-        font-weight: 400;
-        color: white;
+        font-weight: 600;
+        color: black;
     }
 
-    .dual{
-        width: 10rem;
+    .dual {
+        width: 12vw;
     }
 
     .btn:hover {
-        background: white;
-        color: black;
-
+        background: black;
+        color: white;
         transition: 50ms linear;
     }
 
-    .btn-container{
+    .btn-container {
         width: 100%;
-
         display: flex;
         justify-content: center;
-        gap: 1.2rem;
+        align-items: center;
+        position: relative; /* Posizionamento statico */
+        flex-shrink: 0; /* Mantieni la dimensione */
+        gap: 2vw;
+    }
+
+    .download-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap:3vw;
+    }
+
+    .download-title{
+        font-family: sora;
+        font-weight: 600;
+        text-align: center;
+        width: 100%;
+    }
+
+    .btn-down{
+        width: 20vw;
+        color: white;
+        background-color: #FF6CA8;
+        border-color: #FF6CA8;
+    }
+
+    .btn-down:hover {
+        background: black;
+        color: #FF6CA8;
+        transition: 50ms linear;
+    }
+
+    .btn-expl{
+        width: 20vw;
+        color: black;
+        background-color: white;
+        border-color: white;
     }
 
     #footer {
@@ -322,6 +741,179 @@
         text-align: center;
         opacity: 50%;
     }
+
+    @media (max-width: 600px){
+        body{
+            overflow-x: hidden;
+        }
+
+        #nave{
+            display: none;
+        }
+        
+        #info{
+            display: none;
+        }
+
+        .col-6{
+            width: 100%;
+        }
+
+        #stoptheloop {
+            margin-top: 1.4rem;
+            width: 18vw;
+            margin-right: 1.2rem;
+        }
+
+        #welcome{
+            padding: 5vw;
+        }
+
+        #ritmotype-res {
+            margin-top: 20vw;
+            margin-bottom: 0;
+            font-size: 12vw;
+        }
+
+        .ritmotype-title {
+            font-size: 12vw;
+            margin-top: 7vw;
+            margin-bottom: 0;
+        }
+
+        #ritmotype-img1{
+            width: 80%;
+        }
+
+        #stats {
+            display: flex;
+            font-family: sora, sans-serif;
+            font-weight: 600;
+            font-size: 12vw;
+            margin-bottom: 8vw;
+            width: 80vw;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4vw;
+            margin-top: 4vw;
+        }
+
+        .stat-cont {
+            width: 100%;
+            font-size: 6.4vw;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #content{
+            padding: 5vw;
+            row-gap: 10vw;
+        }
+
+        #content .title-container{
+            font-size: 6vw;
+        }
+
+        #content p{
+            font-size: 4.2vw;
+        }
+
+        #content .single-p-mix {
+            gap: 2vw;
+        }
+
+        #content .dual-p-mix {
+            flex-direction: column;
+        }
+
+        .dual-p-mix{
+            gap: 4vw;
+        }
+
+        .dual-p-mix div {
+            width: 100%;
+        }
+
+        #dual-left {
+            align-items: center;
+            gap: 2vw;
+        }
+
+        #dual-right {
+            align-items: center;
+            gap: 2vw;
+        }
+
+        #content ul {
+            font-size: 4.2vw;
+            padding-left: 4vw;
+        }
+
+        #stoplist {
+            border-radius: 3vw;
+            padding: 4vw;
+        }
+
+        #stoplist-img {
+            align-items: center;
+        }
+
+        .btn{
+            height: 14vw;
+            border-radius: 10vw;
+            font-size: 4.8vw;
+        }
+
+        .spoty{
+            width:60vw;
+        }
+
+        .spotify-cont {
+            display: flex;
+            flex-direction: column;
+            gap: 6vw;
+            margin-bottom: 2vw;
+        }
+
+        #stoplist-img img{
+            width: 100%;
+        }
+
+        .download-title{
+            font-size: 6vw;
+        }
+
+        .btn-container{
+            flex-direction: column;
+            gap: 6vw;
+        }
+
+        .btn-down{
+            width: 60vw;
+        }
+
+        .download-container{
+            gap: 4vw;
+        }
+
+        .btn-expl{
+            width: 60vw;
+        }
+
+        .spacer{
+            height: 2vh;
+        }
+
+        #footer h3 {
+            font-size: 4.2vw;
+        }
+
+        #footer{
+            padding: 5vw;
+        }
+    }
 </style>
 
 <script>
@@ -335,5 +927,39 @@
             targetElement.scrollIntoView({ behavior: 'smooth' }); // Scroll fluido
         }
     }
+
+    function openSpotify() {
+        window.open('https://open.spotify.com/user/i9r9kop7b1pa1q5tldv3rwjyb?si=5U0nTxBlTJ2mIUD2f1QV9Q', '_blank');
+    }
+
+
+    function openRitmario() {
+        window.open('https://syncroritmo.github.io/stoptheloop/ritmario.html', '_blank');
+    }
+
+    function openHome() {
+        window.open('https://syncroritmo.github.io/stoptheloop/index.html', '_blank');
+    }
+
+    function openTest() {
+        window.open('https://syncroritmo.github.io/stoptheloop/ritmotest.html', '_blank');
+    }
+
+    function downloadReport() {
+        const newTab = window.open('./ritmotypes_download/StopTheLoop_Report.pdf', '_blank'); // Apre il PDF in una nuova scheda
+        newTab.focus();
+    }
+
+    function downloadSocial() {
+        const newTab = window.open('./ritmotypes_download/The Autotune.png', '_blank'); // Apre il PDF in una nuova scheda
+        newTab.focus();
+    }
+
+    document.querySelectorAll(".icon").forEach(image => {
+    image.addEventListener("click", () => {
+        const link = image.getAttribute("data-link"); // Leggi il link dal data-link
+        window.open(link, "_blank"); // Apri il link in una nuova scheda
+    });
+});
 </script>
 </html>
