@@ -46,6 +46,9 @@
                 autentico benessere. Tuttavia, tradurre tale consapevolezza in azioni concrete richiede coraggio: rallentare, ascoltare i segnali del corpo 
                 e mettere in discussione schemi di vita dettati da convenzioni sociali.</p>
         </div>
+        <div class="video-container">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/boGmSZG7cQQ?si=tuo6okydz6u3fDar" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
         <div class="single-p-mix">
             <div class="title-container">PARTNER</div>
             <p>L’intersezione tra i contributi dei tre partner, Trenord, Headspace e Spotify, dà vita a un progetto che pone il benessere personale al centro. 
@@ -606,6 +609,17 @@
         padding-bottom: 2vw;
     }
 
+    .video-container iframe{
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+
+    .video-container{
+        display: flex;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+
     .spacer{
         width: 100%;
         height: 5vh;
@@ -920,7 +934,7 @@
     }
 
     function downloadReport() {
-        const newTab = window.open('./ritmotypes_download/StopTheLoop_Report.pdf', '_blank'); // Apre il PDF in una nuova scheda
+        const newTab = window.open('./ritmotypes_download/Syncro_StopTheLoop_Report.pdf', '_blank'); // Apre il PDF in una nuova scheda
         newTab.focus();
     }
 
